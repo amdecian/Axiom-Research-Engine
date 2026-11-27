@@ -10,7 +10,7 @@ GitHub-hosted mathematical research software: exact SAT counting, structured per
 - [Actions](https://github.com/amdecian/Axiom-Research-Engine/actions): Free-tier qualification checks the engine and generated portal; Bounded research regression is a manual finite replay.
 - [Research portal source](docs/index.html): enable GitHub Pages from main:/docs to serve this static application.
 - [Hosted engineering contract](docs/Hosted_Engineering_Contract.md) and [scientific program](docs/Scientific_Program.md).
-- [Engineering backlog](research/backlog.json): S001–S112; [scientific backlog](research/scientific-backlog.json): R10–R29.
+- [Engineering backlog](research/backlog.json): S001–S124; [scientific backlog](research/scientific-backlog.json): R10–R29.
 - [Evidence](evidence/) and [notebook](research/notebook/) preserve finite results and negative controls. The imported evidence describes the original local candidate run; remote qualification is separately referenced above.
 
 ## Reproduce
@@ -21,6 +21,10 @@ Python 3.11+; no third-party runtime dependencies.
     python scripts/hosted.py --profile loop-replay
     python scripts/hosted.py --profile portal-check
     python scripts/backlog.py
+
+## Disclosure boundary
+
+The private research workspace is separate. [Disclosure policy and exact-file gate](docs/Disclosure_Boundary.md) applies to all new research; no private data or metadata may enter public CI. Public visibility is not a license grant.
 
 ## Publication and operational limits
 

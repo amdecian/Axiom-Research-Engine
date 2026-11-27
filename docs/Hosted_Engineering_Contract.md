@@ -63,8 +63,10 @@ Sources reviewed 2026-11-27:
 
 ## Research program
 
-Preserve original SAT/permanent algorithms and exact local oracles. New `axiom/patterns.py` provides bounded reference aggregation and arithmetic; see `docs/Scientific_Program.md`. It is not a proof of improvement and does not import R1–R9 executable archives. All 112 engineering and 20 scientific slices remain open; implementation evidence informs closure, but only maintainers close after acceptance. Original paper and concept artwork remain in review-only companion. New 0.4 replay is tied to current Python sources; historical evidence requires original source.
+Preserve original SAT/permanent algorithms and exact local oracles. New `axiom/patterns.py` provides bounded reference aggregation and arithmetic; see `docs/Scientific_Program.md`. It is not a proof of improvement and does not import R1–R9 executable archives. All 124 engineering and 20 scientific slices remain open; implementation evidence informs closure, but only maintainers close after acceptance. Original paper and concept artwork remain in review-only companion. New 0.4 replay is tied to current Python sources; historical evidence requires original source.
 
 ## Wireframes
 
 `docs/index.html` is the working static portal, not a mock live server. Overview: version, exact replay count, backlog counts, strategy comparison. Notebook: searchable finite passes, counterexamples and open claims with evidence hashes. Experiments: matched control and attempt history. Work slices: filter by ID/area, CSV export. Hosting: configured source policy versus pending manual controls. Future live campaign controls, provider configuration, formal proof dashboard and independent verifier are not present. No misleading active execution indicator.
+
+The [dual-repository disclosure boundary](Disclosure_Boundary.md) adds S113–S124 and supersedes conflicting research storage guidance. Public CI uses synthetic data only.

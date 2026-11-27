@@ -1,3 +1,5 @@
 # Contributing
 
 One reviewable slice per branch (for example `slice/R13-weighted-patterns`). State the hypothesis, assumptions, exact acceptance conditions and complexity cost model. Run `python scripts/hosted.py --profile quick` and `python scripts/build_portal.py --check`. For loop changes run `python scripts/hosted.py --profile loop-replay`. Retain counterexamples and null results. Notebook records must be hash-linked to reviewed evidence; no claim promotion from test success alone. Do not commit raw provider prompts, unpublished research, third-party work without rights or credentials. Do not run arbitrary AI-generated programs or schedule campaigns in CI. No contribution is accepted before the repository owner establishes licensing and publication rights. No automatic publishing or self-approval. See the hosted contract and bootstrap guide.
+
+For any external or confidential research, follow [Disclosure_Boundary.md](docs/Disclosure_Boundary.md). Public branches, PRs and issues are disclosure; approval is required before creating them. Never merge private history or use public CI for private research.

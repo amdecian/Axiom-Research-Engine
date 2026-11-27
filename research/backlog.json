@@ -782,5 +782,89 @@
     "dependencies": "S096,S105,S111",
     "acceptance": "Verified hosted qualification, license review, evidence reproducibility and zero-cost account settings.",
     "state": "open / needs review"
+  },
+  {
+    "id": "S113",
+    "title": "[S113] Establish independent private research repository",
+    "dependencies": "S073,S097",
+    "acceptance": "Verify separate private repository and scoped access; no shared Git history, workflows, paid compute, or confidential material on public CI.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S114",
+    "title": "[S114] Implement public/private data classification",
+    "dependencies": "S113,S091",
+    "acceptance": "Default unpublished material to private; prohibit secrets in either repository; document classification transitions and explicit review.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S115",
+    "title": "[S115] Establish private research notebook",
+    "dependencies": "S114,S099",
+    "acceptance": "Versioned confidential records, evidence hashes, distinct claim grades, explicit review; no automatic public promotion.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S116",
+    "title": "[S116] Import original research archives after rights review",
+    "dependencies": "S114,S105,S115",
+    "acceptance": "Owner authorizes exact archive intake; validate ownership, checksums, extraction bounds and replay before recording results.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S117",
+    "title": "[S117] Implement private holdout registry",
+    "dependencies": "S114,S115,S065",
+    "acceptance": "Versioned restricted holdout commitments and independent access design; no values, filenames or private commitment hashes in public artifacts.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S118",
+    "title": "[S118] Establish research disclosure approval contracts",
+    "dependencies": "S114,S115",
+    "acceptance": "Require scientific, rights, security and owner reviews; exact manifest digest and separate publication authorization; do not imply authenticated approval.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S119",
+    "title": "[S119] Implement cross-repository publication manifests",
+    "dependencies": "S118",
+    "acceptance": "Pin private source revision, public base, target repository, allowed paths, classification, sizes and hashes; reject duplicates, unsafe paths and unknown fields.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S120",
+    "title": "[S120] Implement sanitized publication export",
+    "dependencies": "S119",
+    "acceptance": "Offline export of selected committed regular text files to new isolated staging directory; no upload, candidate execution, metadata transfer or private history.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S121",
+    "title": "[S121] Prevent private history and credential leakage",
+    "dependencies": "S119,S120",
+    "acceptance": "Reject symlink, executable, binary, workflow, private marker, common secret and traversal inputs; no private credentials in public CI; independent review required.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S122",
+    "title": "[S122] Establish independent public/private access policies",
+    "dependencies": "S113,S114,S109",
+    "acceptance": "Owner verifies scoped connectors, billing and Actions settings; zero private compute by default; acknowledge Free-plan protection limits.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S123",
+    "title": "[S123] Perform adversarial publication security tests",
+    "dependencies": "S118,S119,S120,S121",
+    "acceptance": "Run synthetic positive and negative tests across standard public runners; no real private inputs; record exact results and limitations.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S124",
+    "title": "[S124] Establish final disclosure and reproducibility acceptance",
+    "dependencies": "S116,S117,S118,S122,S123",
+    "acceptance": "Independent rights, scientific and security review plus explicit owner approval of exact export and public PR diff; verify public reproduction; retain private audit trail.",
+    "state": "open / needs review"
   }
 ]
