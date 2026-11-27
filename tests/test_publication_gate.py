@@ -103,7 +103,7 @@ class PublicationGateTests(unittest.TestCase):
                      "docs/publications/.git/config", "docs/publications/CON.txt", "docs/publications/a.",
                      "docs/publications/AUX.md", "docs/publications/a.md:stream",
                      "docs\\publications\\a.md", "docs/publications/a.zip", "docs/publications/a.exe",
-                     ".github/workflows/x.yml", "research/notebook/L000001.json", "verification/holdouts/x.json",
+                     ".github/workflows/x.yml", "research/notebook/synthetic-private-note.json", "verification/holdouts/x.json",
                      "docs/publications/%2e%2e/x.md", "docs/publications//a.md"):
             with self.subTest(path=path):
                 self.reject(self.manifest | {"files": [self.manifest["files"][0] | {"path": path}]})
