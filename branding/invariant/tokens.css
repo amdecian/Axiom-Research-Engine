@@ -1,0 +1,23 @@
+/* Review-stage theme tokens; semantic verdict colors are independent of brand. */
+:root[data-theme="dark"] {
+  --research-background: #0A1422;
+  --research-surface: #142639;
+  --research-text: #E8F5FF;
+  --research-textMuted: #AEC2D5;
+  --research-accent: #60D9F4;
+  --research-verified: #64D9A1;
+  --research-warning: #F3C270;
+  --research-rejected: #FF9C9C;
+  --research-running: #89C9FF;
+}
+:root[data-theme="light"] {
+  --research-background: #F4F9FC;
+  --research-surface: #FFFFFF;
+  --research-text: #172C42;
+  --research-textMuted: #52616A;
+  --research-accent: #075E78;
+  --research-verified: #08764A;
+  --research-warning: #805100;
+  --research-rejected: #A62229;
+  --research-running: #075A9B;
+}

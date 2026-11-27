@@ -1,0 +1,9 @@
+{
+  "schema_version": "bootstrap-replay-1",
+  "slice": "B006",
+  "source_sha256": "a6f6550d553521db9c9fbc0bf929c68f1a4acba9e15958b44ca496f180f5c493",
+  "approval_digest": "917db9f5bd1d1d6d375df18a75a14968e5d8ef58328301f73bb12d8163650775",
+  "expected_evaluations": 26,
+  "expected_fixture_results": 2482,
+  "purpose": "One-time repository bootstrap acceptance; fixed public fixture replay; no automatic renewal or scheduled discovery."
+}

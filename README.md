@@ -24,6 +24,6 @@ Python 3.11+; no third-party runtime dependencies.
 
 ## Publication and operational limits
 
-Use standard public GitHub-hosted runners for finite project testing, qualification and reproducibility only. No paid inference, self-hosted servers, scheduled discovery or routine artifact uploads. Owner billing controls require verification. The original R1–R9 executable archives, remaining historical engineering documentation, binary replay archive and optional localhost dashboard are not yet imported. The companion archive remains excluded.
+Use standard public GitHub-hosted runners for finite project testing, qualification and reproducibility only. No paid inference, self-hosted servers, scheduled discovery or routine artifact uploads. Owner billing controls require verification. The optional localhost dashboard, historical engineering documents, three provisional branding concepts and capture script are now included. The original R1–R9 executable archives and original binary replay archive are not imported. The companion archive remains excluded. See [bootstrap checkpoint](docs/Bootstrap_Checkpoint.md), [original setup guide](docs/GitHub_Bootstrap.md) and [branding concepts](branding/README.md).
 
 Public visibility is not a software license grant; licensing is pending owner approval. Do not submit confidential or employer-owned material. See [bootstrap issue #1](https://github.com/amdecian/Axiom-Research-Engine/issues/1).

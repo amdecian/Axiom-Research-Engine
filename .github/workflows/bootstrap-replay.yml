@@ -1,0 +1,31 @@
+name: B006 bootstrap replay acceptance
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/bootstrap/replay-approval.json'
+permissions:
+  contents: read
+concurrency:
+  group: bootstrap-replay-acceptance
+  cancel-in-progress: false
+jobs:
+  bootstrap-replay:
+    if: ${{ github.event.repository.private == false && github.repository == 'amdecian/Axiom-Research-Engine' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Verify fixed bootstrap replay
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$RUNNER_ENVIRONMENT" = github-hosted
+          ulimit -v 3145728
+          ulimit -f 65536
+          timeout --signal=TERM --kill-after=5s 240s python scripts/qualify_bootstrap.py
