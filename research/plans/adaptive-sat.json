@@ -1,0 +1,11 @@
+{
+  "schema_version": "loop-1",
+  "name": "Exact SAT strategy exploration and matched control",
+  "seed": 77,
+  "train_seed": 20261127,
+  "holdout_seed": 20261128,
+  "attempts_per_arm": 12,
+  "plateau": 3,
+  "attempt_timeout_seconds": 15,
+  "campaign_timeout_seconds": 180
+}

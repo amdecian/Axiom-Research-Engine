@@ -1,0 +1,8 @@
+{
+  "schema_version": "offline-1",
+  "name": "SAT counting and full Taylor coefficient qualification",
+  "strategies": ["sat.cached_split", "sat.components", "coef.full_quadratic", "coef.all_orders", "coef.omit_h"],
+  "seeds": [20261127, 77],
+  "attempt_timeout_seconds": 30,
+  "campaign_timeout_seconds": 300
+}
