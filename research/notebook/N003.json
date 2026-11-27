@@ -1,0 +1,15 @@
+{
+  "schema_version": "notebook-1",
+  "id": "N003",
+  "title": "Weighted XOR walk aggregation",
+  "status": "finite_pass",
+  "statement": "576 signed integer comparisons at lengths 0\u20134, eight labels, three kernels, all endpoint displacements. Partition enumeration may cost more than direct enumeration.",
+  "evidence": [
+    {
+      "path": "evidence/qualification-linux.txt",
+      "sha256": "4dedbc177357acd6cca707885657505e7cdfec056a2782b3bb050a131eb5826e"
+    }
+  ],
+  "reproduce": "python scripts/hosted.py --profile pattern-regression",
+  "review_status": "publication_pending"
+}

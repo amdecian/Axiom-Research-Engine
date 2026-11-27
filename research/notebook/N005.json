@@ -1,0 +1,10 @@
+{
+  "schema_version": "notebook-1",
+  "id": "N005",
+  "title": "General SAT complexity",
+  "status": "open",
+  "statement": "No general polynomial-time or improved worst-case SAT bound has been established. The next objective is full coefficient-family evaluation and asymptotic accounting.",
+  "evidence": [],
+  "reproduce": "Review R20\u2013R28",
+  "review_status": "publication_pending"
+}

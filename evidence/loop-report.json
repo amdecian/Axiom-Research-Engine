@@ -1,0 +1,769 @@
+{
+  "schema_version": "loop-report-1",
+  "spec": {
+    "plan": {
+      "schema_version": "loop-1",
+      "name": "Exact SAT strategy exploration and matched control",
+      "seed": 77,
+      "train_seed": 20261127,
+      "holdout_seed": 20261128,
+      "attempts_per_arm": 12,
+      "plateau": 3,
+      "attempt_timeout_seconds": 15,
+      "campaign_timeout_seconds": 180
+    },
+    "source_sha256": "a6f6550d553521db9c9fbc0bf929c68f1a4acba9e15958b44ca496f180f5c493",
+    "train_sha256": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+    "holdout_sha256": "0770cb1a189c9757ac3a1585b9b27cfcbdc56d2309961a7078dbdfe038dac662",
+    "train_cases": 96,
+    "holdout_cases": 89,
+    "provider_calls": 0,
+    "generated_code": false,
+    "max_evaluations": 26,
+    "objective": "minimize recursive requests on fixed training suite",
+    "approval_digest": "917db9f5bd1d1d6d375df18a75a14968e5d8ef58328301f73bb12d8163650775"
+  },
+  "reason": "completed",
+  "history": {
+    "adaptive": [
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 1,
+        "strategy": {
+          "branch": "shortest",
+          "unit": false,
+          "components": false,
+          "memo": false
+        },
+        "decision": "baseline",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 6248,
+          "expanded": 6248,
+          "cache_hits": 0,
+          "restriction_literal_visits": 70898
+        },
+        "receipt_ref": "f0341e66e176f67a1f095bd17e8e71faadfa4c44845c80ba2e8eef87fec94bdb",
+        "elapsed_ns": 845604195
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 2,
+        "strategy": {
+          "branch": "balanced",
+          "unit": false,
+          "components": false,
+          "memo": false
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 7016,
+          "expanded": 7016,
+          "cache_hits": 0,
+          "restriction_literal_visits": 58544
+        },
+        "receipt_ref": "d35daedcd9933791cb07ebb2254aabac6fe16fc052cd9a57276db0e61b33073c",
+        "elapsed_ns": 991401605
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 3,
+        "strategy": {
+          "branch": "shortest",
+          "unit": false,
+          "components": false,
+          "memo": true
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 2294,
+          "expanded": 1879,
+          "cache_hits": 415,
+          "restriction_literal_visits": 43844
+        },
+        "receipt_ref": "f14237032be5da998300a834994c9e46e609716e6f73d3311f7f2e6e46f5b514",
+        "elapsed_ns": 668135889
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 4,
+        "strategy": {
+          "branch": "shortest",
+          "unit": true,
+          "components": false,
+          "memo": true
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1486,
+          "expanded": 1242,
+          "cache_hits": 244,
+          "restriction_literal_visits": 30022
+        },
+        "receipt_ref": "a011e244321543c2ba91b9cbbd549b55ffcacd768110ae90e01472c9e7520945",
+        "elapsed_ns": 636826247
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 5,
+        "strategy": {
+          "branch": "shortest",
+          "unit": true,
+          "components": false,
+          "memo": false
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 4355,
+          "expanded": 4355,
+          "cache_hits": 0,
+          "restriction_literal_visits": 52389
+        },
+        "receipt_ref": "6263e42ab692aa53dad71f705dfffc4a47ac88a29f9a27025608328cf13694f7",
+        "elapsed_ns": 632602081
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 6,
+        "strategy": {
+          "branch": "frequency",
+          "unit": true,
+          "components": false,
+          "memo": true
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1672,
+          "expanded": 1379,
+          "cache_hits": 293,
+          "restriction_literal_visits": 25615
+        },
+        "receipt_ref": "0bbc1f42cdcf6301dea9f5ba01fd1c4ed79f8102c10542ec85c042751e2f6144",
+        "elapsed_ns": 648742133
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 7,
+        "strategy": {
+          "branch": "balanced",
+          "unit": true,
+          "components": false,
+          "memo": true
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1654,
+          "expanded": 1321,
+          "cache_hits": 333,
+          "restriction_literal_visits": 25768
+        },
+        "receipt_ref": "6462ad0125b5ad587f523730a658e901d1a53b7c4abf6d264d38a12d6025251f",
+        "elapsed_ns": 647530514
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 8,
+        "strategy": {
+          "branch": "frequency",
+          "unit": true,
+          "components": true,
+          "memo": false
+        },
+        "decision": "plateau_diversity",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1315,
+          "expanded": 1315,
+          "cache_hits": 0,
+          "restriction_literal_visits": 18556
+        },
+        "receipt_ref": "ae652d2b37f92554efd1c28b32e1fc412242b7f16ee06ecae5a7358589034733",
+        "elapsed_ns": 728668241
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 9,
+        "strategy": {
+          "branch": "frequency",
+          "unit": true,
+          "components": false,
+          "memo": false
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 2734,
+          "expanded": 2734,
+          "cache_hits": 0,
+          "restriction_literal_visits": 29383
+        },
+        "receipt_ref": "d1ca1108154732bc6ce70496d07a896a0cd88da2564151c20f074bae75b25291",
+        "elapsed_ns": 700102705
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 10,
+        "strategy": {
+          "branch": "balanced",
+          "unit": true,
+          "components": true,
+          "memo": false
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1297,
+          "expanded": 1297,
+          "cache_hits": 0,
+          "restriction_literal_visits": 18304
+        },
+        "receipt_ref": "834615686149c4a86f27900905f163c4115a9569e877f501d2e8e059cccb88ed",
+        "elapsed_ns": 717434853
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 11,
+        "strategy": {
+          "branch": "balanced",
+          "unit": false,
+          "components": true,
+          "memo": false
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 4172,
+          "expanded": 4172,
+          "cache_hits": 0,
+          "restriction_literal_visits": 36172
+        },
+        "receipt_ref": "fcb0ee3c647ec498977a5ffa3c4b52d7bf43d153ff792e371538aaae5eae5462",
+        "elapsed_ns": 702179682
+      },
+      {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 12,
+        "strategy": {
+          "branch": "balanced",
+          "unit": true,
+          "components": true,
+          "memo": true
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1235,
+          "expanded": 1012,
+          "cache_hits": 223,
+          "restriction_literal_visits": 18222
+        },
+        "receipt_ref": "ba780b66fb88984a8f58b658e67caf737f39f4e42ac62555682feb38d43e08a2",
+        "elapsed_ns": 631769880
+      }
+    ],
+    "blind": [
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 1,
+        "strategy": {
+          "branch": "shortest",
+          "unit": false,
+          "components": false,
+          "memo": false
+        },
+        "decision": "baseline",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 6248,
+          "expanded": 6248,
+          "cache_hits": 0,
+          "restriction_literal_visits": 70898
+        },
+        "receipt_ref": "101573901911887b96c0ec1786477563ec5c0cc51eee320e9487a265c12a55c7",
+        "elapsed_ns": 1128161414
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 2,
+        "strategy": {
+          "branch": "balanced",
+          "unit": false,
+          "components": false,
+          "memo": false
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 7016,
+          "expanded": 7016,
+          "cache_hits": 0,
+          "restriction_literal_visits": 58544
+        },
+        "receipt_ref": "5ad3c36a046cfdd18af77c54f59d6c64a825806c9a7a8fcae51e8caecec7e4f4",
+        "elapsed_ns": 664603025
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 3,
+        "strategy": {
+          "branch": "shortest",
+          "unit": true,
+          "components": false,
+          "memo": true
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1486,
+          "expanded": 1242,
+          "cache_hits": 244,
+          "restriction_literal_visits": 30022
+        },
+        "receipt_ref": "374e8da7c35d12d52f71694796d59e22c411c1ce9083e9f67ce400a508add3bb",
+        "elapsed_ns": 626870780
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 4,
+        "strategy": {
+          "branch": "frequency",
+          "unit": true,
+          "components": true,
+          "memo": false
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1315,
+          "expanded": 1315,
+          "cache_hits": 0,
+          "restriction_literal_visits": 18556
+        },
+        "receipt_ref": "3cf666d8c1350406d637de86c79491200a93bac8fc9a1bc63ed4669155dc24ff",
+        "elapsed_ns": 624261463
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 5,
+        "strategy": {
+          "branch": "frequency",
+          "unit": false,
+          "components": true,
+          "memo": true
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 3484,
+          "expanded": 2397,
+          "cache_hits": 1087,
+          "restriction_literal_visits": 34480
+        },
+        "receipt_ref": "60277eb45e2bc409577485f67769c192a4381776e38e1c622b8ef24bf22b4a67",
+        "elapsed_ns": 808620267
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 6,
+        "strategy": {
+          "branch": "shortest",
+          "unit": false,
+          "components": false,
+          "memo": true
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 2294,
+          "expanded": 1879,
+          "cache_hits": 415,
+          "restriction_literal_visits": 43844
+        },
+        "receipt_ref": "49a98d980361ab40f750d58aa4219886b6790c55276011393ddf507ae800f006",
+        "elapsed_ns": 741011166
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 7,
+        "strategy": {
+          "branch": "balanced",
+          "unit": false,
+          "components": true,
+          "memo": false
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 4172,
+          "expanded": 4172,
+          "cache_hits": 0,
+          "restriction_literal_visits": 36172
+        },
+        "receipt_ref": "1e56697a952be4bb7790d82b99febff1dd94b7511089dd86ac30ddf339cb4e5e",
+        "elapsed_ns": 701153535
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 8,
+        "strategy": {
+          "branch": "balanced",
+          "unit": false,
+          "components": true,
+          "memo": true
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 3350,
+          "expanded": 2335,
+          "cache_hits": 1015,
+          "restriction_literal_visits": 34878
+        },
+        "receipt_ref": "11969c61dd11b585c11659c12943b7d5189e60e78559165e3791aa52cdbd85b4",
+        "elapsed_ns": 676676212
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 9,
+        "strategy": {
+          "branch": "balanced",
+          "unit": false,
+          "components": false,
+          "memo": true
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 4012,
+          "expanded": 3140,
+          "cache_hits": 872,
+          "restriction_literal_visits": 50656
+        },
+        "receipt_ref": "dd8231f5abb999a7fa12bdf7a8c48787566a9ab452933727aac6b0aacb824d47",
+        "elapsed_ns": 733876030
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 10,
+        "strategy": {
+          "branch": "shortest",
+          "unit": true,
+          "components": false,
+          "memo": false
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 4355,
+          "expanded": 4355,
+          "cache_hits": 0,
+          "restriction_literal_visits": 52389
+        },
+        "receipt_ref": "46aa9fa541429e3982f2d41331b1495dd6fcfc9b27cb0697afe3fb6165220f76",
+        "elapsed_ns": 819332585
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 11,
+        "strategy": {
+          "branch": "frequency",
+          "unit": true,
+          "components": false,
+          "memo": true
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1672,
+          "expanded": 1379,
+          "cache_hits": 293,
+          "restriction_literal_visits": 25615
+        },
+        "receipt_ref": "9d9b9c7abd4a3ce61bb2e44e54032e9abc09c8ad3fb3ea63958721b814086dd6",
+        "elapsed_ns": 730075539
+      },
+      {
+        "arm": "blind",
+        "split": "train",
+        "index": 12,
+        "strategy": {
+          "branch": "frequency",
+          "unit": true,
+          "components": false,
+          "memo": false
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 2734,
+          "expanded": 2734,
+          "cache_hits": 0,
+          "restriction_literal_visits": 29383
+        },
+        "receipt_ref": "76be6839c6401ba9adae9fe6fd0ceadac2458b73820fce8fa3ebae80af1b0e23",
+        "elapsed_ns": 692575173
+      }
+    ]
+  },
+  "winners": {
+    "adaptive": {
+      "train": {
+        "arm": "adaptive",
+        "split": "train",
+        "index": 12,
+        "strategy": {
+          "branch": "balanced",
+          "unit": true,
+          "components": true,
+          "memo": true
+        },
+        "decision": "mutate_incumbent",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1235,
+          "expanded": 1012,
+          "cache_hits": 223,
+          "restriction_literal_visits": 18222
+        },
+        "receipt_ref": "ba780b66fb88984a8f58b658e67caf737f39f4e42ac62555682feb38d43e08a2",
+        "elapsed_ns": 631769880
+      },
+      "holdout": {
+        "arm": "adaptive",
+        "split": "holdout",
+        "index": 1,
+        "strategy": {
+          "branch": "balanced",
+          "unit": true,
+          "components": true,
+          "memo": true
+        },
+        "decision": "frozen_training_winner",
+        "input_ref": "0770cb1a189c9757ac3a1585b9b27cfcbdc56d2309961a7078dbdfe038dac662",
+        "oracle_ref": "4c71b11880919fca4dc5a203ed2729eb31c9d2d6cd264b285fd3931446430974",
+        "verdict": "finite_pass",
+        "checked": 89,
+        "total": 89,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1318,
+          "expanded": 1085,
+          "cache_hits": 233,
+          "restriction_literal_visits": 19042
+        },
+        "receipt_ref": "776e245dbbbbc9fec15cb6755f4fc880173ea13b14db8b23e7d6a2e46d2d1b45",
+        "elapsed_ns": 752527588
+      }
+    },
+    "blind": {
+      "train": {
+        "arm": "blind",
+        "split": "train",
+        "index": 4,
+        "strategy": {
+          "branch": "frequency",
+          "unit": true,
+          "components": true,
+          "memo": false
+        },
+        "decision": "seeded_nonadaptive",
+        "input_ref": "b77a0f1d934581cf8d6b1a158a69c9b5a5cca4e612b9d94070d7b8a20782f54f",
+        "oracle_ref": "4d49b29610be9aad96a3b451488b700468d04afe2c27ae5ceedc4bdea4195189",
+        "verdict": "finite_pass",
+        "checked": 96,
+        "total": 96,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1315,
+          "expanded": 1315,
+          "cache_hits": 0,
+          "restriction_literal_visits": 18556
+        },
+        "receipt_ref": "3cf666d8c1350406d637de86c79491200a93bac8fc9a1bc63ed4669155dc24ff",
+        "elapsed_ns": 624261463
+      },
+      "holdout": {
+        "arm": "blind",
+        "split": "holdout",
+        "index": 1,
+        "strategy": {
+          "branch": "frequency",
+          "unit": true,
+          "components": true,
+          "memo": false
+        },
+        "decision": "frozen_training_winner",
+        "input_ref": "0770cb1a189c9757ac3a1585b9b27cfcbdc56d2309961a7078dbdfe038dac662",
+        "oracle_ref": "4c71b11880919fca4dc5a203ed2729eb31c9d2d6cd264b285fd3931446430974",
+        "verdict": "finite_pass",
+        "checked": 89,
+        "total": 89,
+        "counterexample": null,
+        "metrics": {
+          "requests": 1356,
+          "expanded": 1356,
+          "cache_hits": 0,
+          "restriction_literal_visits": 18471
+        },
+        "receipt_ref": "ee32ac8cb52d3c63ed20179c01e9e40ead9a6e5e48294f43f3df2b5fbc4d7880",
+        "elapsed_ns": 638097419
+      }
+    }
+  },
+  "elapsed_seconds": 19.842,
+  "claims": "Finite fixture observations. Recursive requests are not runtime, bit complexity, or a proof. No AI or generated code."
+}

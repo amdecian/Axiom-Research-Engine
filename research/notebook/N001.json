@@ -1,0 +1,15 @@
+{
+  "schema_version": "notebook-1",
+  "id": "N001",
+  "title": "SAT and permanent qualification",
+  "status": "finite_pass",
+  "statement": "436 exact fixture comparisons and two expected counterexamples; finite tests only.",
+  "evidence": [
+    {
+      "path": "evidence/qualification-linux.txt",
+      "sha256": "4dedbc177357acd6cca707885657505e7cdfec056a2782b3bb050a131eb5826e"
+    }
+  ],
+  "reproduce": "python scripts/hosted.py --profile quick",
+  "review_status": "publication_pending"
+}

@@ -1,0 +1,7 @@
+{
+  "ledger": "PASS",
+  "replayed_evaluations": 26,
+  "fixture_results_rechecked": 2482,
+  "terminal_reason": "completed",
+  "note": "Local consistency and deterministic replay, not signed authenticity."
+}

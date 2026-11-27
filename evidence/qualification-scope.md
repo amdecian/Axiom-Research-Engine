@@ -1,0 +1,7 @@
+# v0.4 local qualification record
+
+- Linux x86_64 / Python 3.13.5: 58 unit tests passed; 436 exact fixture checks and 2 intentional counterexamples. Hosted wrapper measured 20.330 s wall, 27.396 s child user CPU, 3.141 s child system CPU, 102,760 KiB max child RSS (not aggregate). Local build machine, not GitHub runner timing.
+- Adaptive campaign: 19.842 s reported campaign elapsed; completed, 26 evaluations, deterministic replay independently recalculated 2,482 fixture results. See `loop-replay.json`, `loop-report.json`, `sat-loop-replay.zip`; source digest matches current Python source. This is local consistency, not cryptographic signer identity.
+- Weighted XOR aggregation: 576 exact signed integer comparisons in test suite. Modular division: 498 signed quotient comparisons. CRT: 65 counts plus negative tests. Counts overlap the unit-test suite; do not add them as independent campaigns.
+- Browser: Chromium desktop 1440x960 and mobile 390x844; five views, data counts, notebook status filter, 20 scientific slices, search for Möbius, light mode, attempt history, hosting controls, no horizontal page overflow on mobile and no JS errors. CSV export is implemented; download behavior not independently checked here.
+- YAML parsing of two workflow files, both read-only, no scheduled or pull_request_target trigger; five notebook entries validated against schema; deterministic portal check passed. No remote Actions execution, remote billing setting, Pages deployment, Windows/ARM/macOS run, formal proof validation or publication-rights/legal review performed.

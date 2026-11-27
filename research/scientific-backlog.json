@@ -1,0 +1,142 @@
+[
+  {
+    "id": "R10",
+    "title": "[R10] Audit permanent circuit lower bounds",
+    "dependencies": "research baseline / review",
+    "acceptance": "Map theorem model, characteristic, uniformity and relation to structured families; cite independently checked statements.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R11",
+    "title": "[R11] Compare subexponential SAT approaches",
+    "dependencies": "research baseline / review",
+    "acceptance": "Compare reductions, hidden constants, arithmetic vs bit cost; verify sources before relying on claims.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R12",
+    "title": "[R12] Weighted quotient graphs",
+    "dependencies": "research baseline / review",
+    "acceptance": "Define endpoint-fixed weighted XOR walk semantics and validate signed examples.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R13",
+    "title": "[R13] M\u00f6bius inversion aggregation",
+    "dependencies": "R12",
+    "acceptance": "Exact signed tests and direct oracle; preserve quotient multiplicities; test actual R9 transfer later.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R14",
+    "title": "[R14] Graph width and contraction complexity",
+    "dependencies": "research baseline / review",
+    "acceptance": "Measure treewidth/cut width and actual contraction work, not only label counts.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R15",
+    "title": "[R15] Cross-pattern graph reuse",
+    "dependencies": "research baseline / review",
+    "acceptance": "Aggregate graph weights across patterns; prove equivalence and cost.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R16",
+    "title": "[R16] Finite Fourier construction review",
+    "dependencies": "research baseline / review",
+    "acceptance": "Verify theorem, explicit algorithm and crossover; compare with Walsh baseline.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R17",
+    "title": "[R17] Fourier over prime-power rings",
+    "dependencies": "research baseline / review",
+    "acceptance": "Prove ring-compatible operations or show counterexamples; exact transform results.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R18",
+    "title": "[R18] Sunflower-style grouping",
+    "dependencies": "research baseline / review",
+    "acceptance": "Test weighted common-core identities, preserve signs, orders and multiplicity.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R19",
+    "title": "[R19] Valuation-aware exact arithmetic",
+    "dependencies": "research baseline / review",
+    "acceptance": "Known-divisible quotient precision checks, nonintegral cancellation and sound guard digits.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R20",
+    "title": "[R20] Truncated permanent polynomials",
+    "dependencies": "research baseline / review",
+    "acceptance": "Compare all orders with direct signed rational oracle; target repeated minors.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R21",
+    "title": "[R21] Modular Hermite interpolation",
+    "dependencies": "research baseline / review",
+    "acceptance": "Identify admissible moduli, denominators and interpolation uniqueness.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R22",
+    "title": "[R22] Final count CRT",
+    "dependencies": "research baseline / review",
+    "acceptance": "Reconstruct unique count from pairwise coprime residues; test end-to-end reduction and bad moduli.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R23",
+    "title": "[R23] Asymmetric SAT-derived matrices",
+    "dependencies": "research baseline / review",
+    "acceptance": "Generate genuine signed reductions and compare with known counts.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R24",
+    "title": "[R24] Independent Lean specifications",
+    "dependencies": "research baseline / review",
+    "acceptance": "Freeze theorem statement, toolchain and assumptions before proof generation.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R25",
+    "title": "[R25] Formalize exact identities",
+    "dependencies": "research baseline / review",
+    "acceptance": "No sorry/admitted proofs; audit axioms and independent statements.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R26",
+    "title": "[R26] Proof compression",
+    "dependencies": "research baseline / review",
+    "acceptance": "Compare theorem-equivalent developments, audit assumptions and resources.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R27",
+    "title": "[R27] Full asymptotic bound",
+    "dependencies": "research baseline / review",
+    "acceptance": "Account for all nodes, orders, arithmetic bit lengths and sparsification; no inference from finite results.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R28",
+    "title": "[R28] End-to-end SAT benchmarks",
+    "dependencies": "research baseline / review",
+    "acceptance": "Compare matched baselines, difficult SAT/UNSAT, time and memory; preserve null results.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "R29",
+    "title": "[R29] Reproducible research publication",
+    "dependencies": "research baseline / review",
+    "acceptance": "Rights approval, versioned source and evidence, independent replay and limited claims.",
+    "state": "open / needs review"
+  }
+]

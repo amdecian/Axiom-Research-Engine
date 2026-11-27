@@ -1,0 +1,15 @@
+{
+  "schema_version": "notebook-1",
+  "id": "N002",
+  "title": "Matched adaptive strategy replay",
+  "status": "finite_pass",
+  "statement": "26 evaluations; 2,482 exact results replayed. Recursive requests are not elapsed time or general complexity.",
+  "evidence": [
+    {
+      "path": "evidence/loop-replay.json",
+      "sha256": "817b857b4ca0ea3ceb294e516478cff9326a8996ba989d89fff39e0bfbc7738e"
+    }
+  ],
+  "reproduce": "python scripts/hosted.py --profile loop-replay",
+  "review_status": "publication_pending"
+}

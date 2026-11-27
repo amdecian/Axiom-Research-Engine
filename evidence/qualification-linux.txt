@@ -1,0 +1,103 @@
+test_approval (test_campaign.CampaignTests.test_approval) ... ok
+test_concurrent_approval (test_campaign.CampaignTests.test_concurrent_approval) ... ok
+test_duplicate_keys (test_campaign.CampaignTests.test_duplicate_keys) ... ok
+test_negative_control (test_campaign.CampaignTests.test_negative_control) ... d7af4564-701c-4bf0-a5c1-e503cdb0c182 coef.omit_h 77 counterexample 0/36
+ok
+test_oversize (test_campaign.CampaignTests.test_oversize) ... ok
+test_plan (test_campaign.CampaignTests.test_plan) ... ok
+test_reject_fields (test_campaign.CampaignTests.test_reject_fields) ... ok
+test_success (test_campaign.CampaignTests.test_success) ... 5e977082-847b-4f7f-b213-980da59a7eeb sat.components 77 finite_pass 80/80
+ok
+test_timeout (test_campaign.CampaignTests.test_timeout) ... ok
+test_worker_failure (test_campaign.CampaignTests.test_worker_failure) ... ok
+test_bad (test_engine.Algorithms.test_bad) ... ok
+test_empty_clause (test_engine.Algorithms.test_empty_clause) ... ok
+test_exact (test_engine.Algorithms.test_exact) ... ok
+test_example (test_engine.Algorithms.test_example) ... ok
+test_free (test_engine.Algorithms.test_free) ... ok
+test_quadratic (test_engine.Algorithms.test_quadratic) ... ok
+test_sweep (test_engine.Algorithms.test_sweep) ... ok
+test_tautology (test_engine.Algorithms.test_tautology) ... ok
+test_unsat (test_engine.Algorithms.test_unsat) ... ok
+test_approve (test_engine.Store.test_approve) ... ok
+test_chain (test_engine.Store.test_chain) ... ok
+test_no_edit (test_engine.Store.test_no_edit) ... ok
+test_tamper_detection (test_engine.Store.test_tamper_detection) ... ok
+test_unknown (test_engine.Store.test_unknown) ... ok
+test_profiles (test_hosted.HostedTests.test_profiles) ... ok
+test_public_only (test_hosted.HostedTests.test_public_only) ... ok
+test_reject_wrong_scope (test_hosted.HostedTests.test_reject_wrong_scope) ... ok
+test_approval_rejects_changed_plan (test_loop.LoopTests.test_approval_rejects_changed_plan) ... ok
+test_blob_integrity (test_loop.LoopTests.test_blob_integrity) ... ok
+test_complete_replay_and_tamper (test_loop.LoopTests.test_complete_replay_and_tamper) ... adaptive train 1 finite_pass 6072
+blind train 1 finite_pass 6072
+adaptive train 2 finite_pass 7656
+blind train 2 finite_pass 7656
+adaptive holdout 1 finite_pass 5184
+blind holdout 1 finite_pass 5184
+ok
+test_duplicate_key (test_loop.LoopTests.test_duplicate_key) ... ok
+test_holdout_disjoint (test_loop.LoopTests.test_holdout_disjoint) ... ok
+test_no_overwrite (test_loop.LoopTests.test_no_overwrite) ... ok
+test_plan_guards (test_loop.LoopTests.test_plan_guards) ... ok
+test_timeout_records_failure (test_loop.LoopTests.test_timeout_records_failure) ... Loop stopped: TimeoutExpired
+ok
+test_all_strategies_exhaustive_two_vars (test_loop.StrategyTests.test_all_strategies_exhaustive_two_vars) ... ok
+test_counterexample (test_loop.StrategyTests.test_counterexample) ... ok
+test_diversity (test_loop.StrategyTests.test_diversity) ... ok
+test_malformed_worker_data (test_loop.StrategyTests.test_malformed_worker_data) ... ok
+test_signed_duplicate_and_free_vars (test_loop.StrategyTests.test_signed_duplicate_and_free_vars) ... ok
+test_space (test_loop.StrategyTests.test_space) ... ok
+test_strategy_validation (test_loop.StrategyTests.test_strategy_validation) ... ok
+test_all_signed_patterns (test_patterns.PatternsTests.test_all_signed_patterns) ... ok
+test_crt (test_patterns.PatternsTests.test_crt) ... ok
+test_division (test_patterns.PatternsTests.test_division) ... ok
+test_guard (test_patterns.PatternsTests.test_guard) ... ok
+test_repeated_endpoint (test_patterns.PatternsTests.test_repeated_endpoint) ... ok
+test_all_two_variable_cnfs (test_research_math.ResearchMath.test_all_two_variable_cnfs) ... ok
+test_component_example (test_research_math.ResearchMath.test_component_example) ... ok
+test_empty (test_research_math.ResearchMath.test_empty) ... ok
+test_invalid_literal (test_research_math.ResearchMath.test_invalid_literal) ... ok
+test_polynomial_empty (test_research_math.ResearchMath.test_polynomial_empty) ... ok
+test_polynomial_hand (test_research_math.ResearchMath.test_polynomial_hand) ... ok
+test_polynomial_rational (test_research_math.ResearchMath.test_polynomial_rational) ... ok
+test_polynomial_shape (test_research_math.ResearchMath.test_polynomial_shape) ... ok
+test_seeded_polynomial (test_research_math.ResearchMath.test_seeded_polynomial) ... ok
+test_seeded_sat (test_research_math.ResearchMath.test_seeded_sat) ... ok
+test_unit_free (test_research_math.ResearchMath.test_unit_free) ... ok
+
+----------------------------------------------------------------------
+Ran 58 tests in 7.625s
+
+OK
+ea565615-c831-4b19-9de7-5b06afda1108 sat.cached_split 20261127 finite_pass 80/80
+ea44ee76-ed9e-4a90-952c-7bf4551e2db9 sat.components 20261127 finite_pass 80/80
+3a4899ee-6c7e-401d-b653-4e1baeb5e479 coef.full_quadratic 20261127 finite_pass 36/36
+fde0a06e-4442-4360-b110-d6ca8df0c016 coef.all_orders 20261127 finite_pass 22/22
+c27607fc-b487-4e19-b4d6-0d9d406b9ecc coef.omit_h 20261127 counterexample 0/36
+277f605a-52ae-4b49-951f-a1102482bed3 sat.cached_split 77 finite_pass 80/80
+b22b0e02-088b-44df-9107-d1f075d4727d sat.components 77 finite_pass 80/80
+2eb5d633-25e9-4c73-b0fa-f9926bf9e4d4 coef.full_quadratic 77 finite_pass 36/36
+c8affd52-d756-4f79-b875-4bc24407b8fd coef.all_orders 77 finite_pass 22/22
+c00ae5ae-c0a2-4c29-a279-59ae8479fa36 coef.omit_h 77 counterexample 0/36
+{"campaign_id": "ba4a2a83-9210-49b9-9d05-3d80c146bfec", "reason": "completed", "verified_attempts": 10, "failed_attempts": 0}
+PASS
+/tmp/axiom-qualification-mut5ry5d/snapshot.json
+{
+  "seq": 23,
+  "event_id": "faec2ae6-597a-4e68-b362-5906258acd22",
+  "ts": "2026-11-27T20:22:13+00:00",
+  "kind": "memory.approved",
+  "payload": {
+    "attempt_id": "ea565615-c831-4b19-9de7-5b06afda1108",
+    "evidence_event": "00631c32-6757-4c4d-b0a8-7c06fc0b53dd",
+    "grade": "finite_pass",
+    "lesson": "Finite fixture pass only: sat.cached_split",
+    "source_hash": "acb4ee8772d8c5b323c65df6597f462e8fc6205a3870248b93071552e6682bf3"
+  },
+  "prev": "c6b8752f2999ae5978295e7cf1621fd43cf77dbfdbdcafc12653f5c64e716e00",
+  "hash": "3d71d671e4a7984ceba8bbbf08b0b4f30a93593e65f1b18bbe372407c0db578e"
+}
+PASS
+QUALIFIED: 10 attempts; 8 finite passes (436 exact fixture comparisons); 2 expected counterexamples; ledger and explicit approval passed.
+{"artifacts_uploaded": 0, "child_system_cpu_seconds": 3.141, "child_user_cpu_seconds": 27.396, "elapsed_seconds": 20.33, "machine": "x86_64", "max_child_rss_kib": 102760, "platform": "Linux", "profile": "quick", "provider_calls": 0, "python": "3.13.5", "source_commit": "local-uncommitted", "status": "passed", "timeout_seconds": 300}

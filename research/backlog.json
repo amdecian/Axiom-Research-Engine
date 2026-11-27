@@ -1,0 +1,786 @@
+[
+  {
+    "id": "S001",
+    "title": "[S001] Repository scaffolding, architecture decisions, versioning and publication gate",
+    "dependencies": "\u2014",
+    "acceptance": "Clean offline checkout; independent public-candidate distribution; no credentials or unapproved research in history.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S002",
+    "title": "[S002] Validate versioned campaign, job, receipt and lesson schemas",
+    "dependencies": "S001",
+    "acceptance": "Reject malformed, oversized, unknown-version and invalid rational/decimal fields.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S003",
+    "title": "[S003] Transactional append-only event ledger and projection",
+    "dependencies": "S002",
+    "acceptance": "Replay yields same state; tampering and duplicate events detected.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S004",
+    "title": "[S004] SAT exhaustive and permanent-polynomial exact oracles",
+    "dependencies": "S002",
+    "acceptance": "Match hand examples, signed rational controls, empty CNF/clause, free variables.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S005",
+    "title": "[S005] Content-addressed artifact ingestion and quotas",
+    "dependencies": "S003",
+    "acceptance": "Corrupted blob, path traversal, symlink and duplicate digest cases rejected.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S006",
+    "title": "[S006] Signed verifier receipt and externally anchored checkpoints",
+    "dependencies": "S003,S005",
+    "acceptance": "Recomputed hash without trusted signature is rejected.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S007",
+    "title": "[S007] Public fixture registry and separate private holdout commitments",
+    "dependencies": "S004,S005",
+    "acceptance": "Seeded reproducibility; candidate cannot access expected answers.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S008",
+    "title": "[S008] Offline replay and evidence export",
+    "dependencies": "S001\u2013S007",
+    "acceptance": "Clean environment reproduces exact outputs; timing variance separately labeled.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S009",
+    "title": "[S009] Campaign state machine and role policy",
+    "dependencies": "S008",
+    "acceptance": "Illegal transition, unauthorized start and stale approval denied.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S010",
+    "title": "[S010] Durable queue, leases, idempotent receipts and outbox",
+    "dependencies": "S009",
+    "acceptance": "Duplicate deliveries do not duplicate execution result or cost charge.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S011",
+    "title": "[S011] Budget reservation / reconciliation",
+    "dependencies": "S010",
+    "acceptance": "Parallel jobs cannot overspend; caps stop dispatch.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S012",
+    "title": "[S012] Linux guest runner with pinned image and scratch directory",
+    "dependencies": "S010",
+    "acceptance": "Worker cannot read host files, keys, verifier or other jobs.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S013",
+    "title": "[S013] External CPU/RAM/PID/time/output limits",
+    "dependencies": "S012",
+    "acceptance": "Fork bomb, runaway loop, output flood terminated and classified.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S014",
+    "title": "[S014] Separate referee worker, private mounts and egress policy",
+    "dependencies": "S012",
+    "acceptance": "Candidate cannot see holdouts; forged receipts fail.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S015",
+    "title": "[S015] Pause, emergency stop and crash recovery",
+    "dependencies": "S011\u2013S014",
+    "acceptance": "Kill descendant processes, revoke leases, no automatic resume.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S016",
+    "title": "[S016] Security qualification and recovery drill",
+    "dependencies": "S009\u2013S015",
+    "acceptance": "Negative isolation tests, budget crash test, documented approval.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S017",
+    "title": "[S017] Provider-neutral gateway and offline mock",
+    "dependencies": "S016",
+    "acceptance": "No live calls when disabled; key never enters prompt/worker.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S018",
+    "title": "[S018] Prompt/response schema and source citation discipline",
+    "dependencies": "S017",
+    "acceptance": "Nonexistent evidence IDs, unsafe scope and unknown strategy rejected.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S019",
+    "title": "[S019] Proposer and bounded portfolio scheduler",
+    "dependencies": "S018",
+    "acceptance": "Generates distinct typed hypotheses; maximum attempts enforced.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S020",
+    "title": "[S020] Independent critic and counterexample queue",
+    "dependencies": "S019",
+    "acceptance": "Known omitted-H and false symmetry claims trigger adversarial test.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S021",
+    "title": "[S021] Immutable memory snapshots and retrieval",
+    "dependencies": "S018",
+    "acceptance": "Return only approved scoped records with source hashes.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S022",
+    "title": "[S022] Review queue, provenance validation, supersession",
+    "dependencies": "S021,S014",
+    "acceptance": "Phantom prior attempt and stale concurrent revision rejected.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S023",
+    "title": "[S023] Plateau detection, diverse approach selection, budget-aware stop",
+    "dependencies": "S019\u2013S022",
+    "acceptance": "Simulated repeated failures stop; alternative technique slot recorded.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S024",
+    "title": "[S024] Memory-on/off/shuffled and conventional controls",
+    "dependencies": "S023",
+    "acceptance": "Matched budgets, seeds and all failed attempts archived.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S025",
+    "title": "[S025] Import R1\u2013R9 archives on receipt; validate checksums and manifest",
+    "dependencies": "S008",
+    "acceptance": "Replay early pilot and coefficient audit; label nonreproduced records.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S026",
+    "title": "[S026] Rank-one and two-correction exact adapter",
+    "dependencies": "S025",
+    "acceptance": "Check mixed terms, signed fixtures and omission counterexamples.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S027",
+    "title": "[S027] Cut-rank overlap certificates and scheduling diagnostics",
+    "dependencies": "S026",
+    "acceptance": "Reproduce low overlap and forced overlap on source families.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S028",
+    "title": "[S028] Reproduce full two-crossing Fourier/displacement contraction",
+    "dependencies": "S027",
+    "acceptance": "Agree with independent small controls and five-size results at fixed precision.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S029",
+    "title": "[S029] Exact p-adic normalization, guard precision and integer recurrence",
+    "dependencies": "S028",
+    "acceptance": "Handle 5408/11 nonunit witness without invalid modular inverse.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S030",
+    "title": "[S030] Alternative shared-interior representation, measure precision growth",
+    "dependencies": "S029",
+    "acceptance": "Compare against known ten digits; attempt eleven only within approved limits; count all work.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S031",
+    "title": "[S031] Higher Taylor/crossing orders and asymmetry suite",
+    "dependencies": "S026,S029",
+    "acceptance": "Independent oracle agreement on signed, combined and higher-order inputs.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S032",
+    "title": "[S032] End-to-end CNF-to-permanent interpolation and final count recovery",
+    "dependencies": "S031",
+    "acceptance": "Exact counts match exhaustive SAT; complete bit/time accounting, CRT conditions verified.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S033",
+    "title": "[S033] Formal statement and assumption registry",
+    "dependencies": "S008",
+    "acceptance": "Scope and quantifiers included in versioned statement hash.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S034",
+    "title": "[S034] Pinned Lean proof checker, dependency/axiom policy",
+    "dependencies": "S033,S014",
+    "acceptance": "Reject `sorry`, unapproved axioms/imports and theorem statement drift.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S035",
+    "title": "[S035] Formalize simple permanent expansion/degree-two identity",
+    "dependencies": "S034",
+    "acceptance": "Kernel receipt matches reviewed theorem statement.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S036",
+    "title": "[S036] Formalize low-rank completion and retirement invariants",
+    "dependencies": "S035,S026",
+    "acceptance": "Explicit domain assumptions; counterexample tests challenge weakened hypotheses.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S037",
+    "title": "[S037] Complexity instrumentation by phase and bit size",
+    "dependencies": "S030,S033",
+    "acceptance": "Detect preprocessing, integer growth and storage omitted from score.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S038",
+    "title": "[S038] Parameterized bound for shared computation",
+    "dependencies": "S031,S037",
+    "acceptance": "State n,N,h,rank,width,k, bit cost; stress worst-case families.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S039",
+    "title": "[S039] General SAT reduction accounting and baseline bound comparison",
+    "dependencies": "S032,S038",
+    "acceptance": "Includes all nodes/orders/sparsification/recovery; no empirical proof claims.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S040",
+    "title": "[S040] Independent proof review and negative-result report",
+    "dependencies": "S034\u2013S039",
+    "acceptance": "Reproducible theorem checks or explicitly open obligations; no forced claim.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S041",
+    "title": "[S041] Overview, campaign and experiment browser",
+    "dependencies": "S003",
+    "acceptance": "Live read model, exact evidence, accessible navigation and no fabricated metrics.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S042",
+    "title": "[S042] Campaign builder and live controls",
+    "dependencies": "S009,S015",
+    "acceptance": "Dry run, hash approval, pause/stop visible and operational.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S043",
+    "title": "[S043] Notebook and verification detail",
+    "dependencies": "S022,S041",
+    "acceptance": "Filter grades, inspect receipts and explicit approval, no silent history edits.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S044",
+    "title": "[S044] Proof workspace and benchmark explorer",
+    "dependencies": "S034,S037",
+    "acceptance": "Show assumptions, checker status, matched workloads and comparable metrics.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S045",
+    "title": "[S045] Settings, roles, privacy, provider and worker health",
+    "dependencies": "S016,S042",
+    "acceptance": "Default OFF, opt-in policy, auth/CSRF and stop test.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S046",
+    "title": "[S046] Research graph, reproducible report and export",
+    "dependencies": "S008,S043",
+    "acceptance": "Trace assertion to archived evidence; private data excluded from public export.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S047",
+    "title": "[S047] Packaging, signing, SBOM, CI and backup/restore",
+    "dependencies": "S045,S046",
+    "acceptance": "Signed reproducible manifest, clean install/uninstall; no service starts silently.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S048",
+    "title": "[S048] Controlled pilot campaign and readiness decision",
+    "dependencies": "G1\u2013G5,S047",
+    "acceptance": "Independent review, budget reconciliation, negative controls, reproducible output and human go/no-go.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S049",
+    "title": "[S049] Baseline source audit",
+    "dependencies": "S001",
+    "acceptance": "Upstream source identity and limitations recorded; no upstream executable reuse.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S050",
+    "title": "[S050] Declarative strategy space",
+    "dependencies": "S025",
+    "acceptance": "Strict schema; all 24 configurations on exhaustive 512 CNFs; no dynamic code.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S051",
+    "title": "[S051] Independent exact oracle",
+    "dependencies": "S007,S050",
+    "acceptance": "Incorrect count and malformed result rejected; independent oracle in verifier process/role.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S052",
+    "title": "[S052] Matched adaptive and blind arms",
+    "dependencies": "S050,S051",
+    "acceptance": "Same fixtures, attempt caps and baseline; fixed seeds; separate histories; null results preserved.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S053",
+    "title": "[S053] Diverse selection and plateau",
+    "dependencies": "S052",
+    "acceptance": "Seeded tie-breaking; no duplicates; escape policy test; characterize novelty metrics.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S054",
+    "title": "[S054] Freeze winners and holdout",
+    "dependencies": "S052",
+    "acceptance": "Both winners frozen before evaluation; held-out disjoint and independent; no feedback to selection.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S055",
+    "title": "[S055] Evidence CAS",
+    "dependencies": "S005,S051",
+    "acceptance": "Hash validate on read, atomic local writes; production immutable versioned store with backup.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S056",
+    "title": "[S056] Deterministic replay",
+    "dependencies": "S008,S055",
+    "acceptance": "Replay exact results and policy, reject altered blob, malformed state, wrong source; signed external ledger anchor.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S057",
+    "title": "[S057] Multi-seed experimental protocol",
+    "dependencies": "S052,S054",
+    "acceptance": "Prespecified seeds; matched total evaluation and compute budgets; report distributions and nulls.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S058",
+    "title": "[S058] Operation and resource instrumentation",
+    "dependencies": "S057",
+    "acceptance": "Same kernel cost model, timing/RSS/bit lengths, trust external measurements; no misleading speed ratio.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S059",
+    "title": "[S059] Provider proposal schema",
+    "dependencies": "S017,S050",
+    "acceptance": "Bounded strict typed proposals, evidence snapshot ID validation, no generated execution, provider error classification.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S060",
+    "title": "[S060] Provider broker and budgets",
+    "dependencies": "S011,S059",
+    "acceptance": "Explicit model and token caps, cost reservation/reconciliation, retries count, keys only in broker.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S061",
+    "title": "[S061] Verified scoped memory",
+    "dependencies": "S020,S055,S056",
+    "acceptance": "Namespace/ACL enforcement, evidence-linked notes, revocation and dependency checks, empty history cannot invent observations.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S062",
+    "title": "[S062] Matched memory controls",
+    "dependencies": "S057,S061",
+    "acceptance": "Memory on/off/shuffled with equal provider, seed, evaluation and cost budget; leakage audit.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S063",
+    "title": "[S063] Candidate patch lineage",
+    "dependencies": "S012,S059",
+    "acceptance": "Parent hash, unique context, all-or-nothing apply, size/format caps; no edit executes before isolation gate.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S064",
+    "title": "[S064] Hardened worker qualification",
+    "dependencies": "S012\u2013S016,S063",
+    "acceptance": "Deny network/files/secrets, process-tree termination, bounded output, PID/RAM/disk/CPU, adversarial tests.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S065",
+    "title": "[S065] Separate referee trust domain",
+    "dependencies": "S014,S064",
+    "acceptance": "Candidate cannot access hidden tests, modify verifier or forge receipt; signed trusted measurement.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S066",
+    "title": "[S066] Permanent polynomial search plugin",
+    "dependencies": "S026\u2013S028,S051",
+    "acceptance": "Compare all coefficient orders on signed inputs against independent oracle; keep higher-order terms.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S067",
+    "title": "[S067] Precision and arithmetic plugin",
+    "dependencies": "S029,S066",
+    "acceptance": "Nonunit denominator and valuation regression; proof of precision bound; report bit complexity.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S068",
+    "title": "[S068] General SAT transfer benchmark",
+    "dependencies": "S030\u2013S032,S058,S066",
+    "acceptance": "Reproduce reduction, compare count and complete resource cost on asymmetric/full inputs.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S069",
+    "title": "[S069] Formal proof and cost gates",
+    "dependencies": "S033\u2013S040,S065",
+    "acceptance": "Pin toolchain, inspect axioms, reject admitted proofs, explicit correctness/complexity theorem.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S070",
+    "title": "[S070] Research dashboard integration",
+    "dependencies": "S041\u2013S044,S056",
+    "acceptance": "Evidence-linked loop views, accessibility, actual status, dark/light, filters, export, authorization separation.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S071",
+    "title": "[S071] Release and restore drill",
+    "dependencies": "S045\u2013S047,S055,S064",
+    "acceptance": "Build once, provenance, SBOM/signing, restore evidence, rollback exact artifact, no automatic publisher.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S072",
+    "title": "[S072] Controlled independent pilot",
+    "dependencies": "S048,S062,S065,S068,S069,S070,S071",
+    "acceptance": "Operator-authorized limits, emergency stop, independent review, report failures and no unjustified scientific claims.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S073",
+    "title": "[S073] Public ownership and publication review",
+    "dependencies": "S001",
+    "acceptance": "Owner confirms rights, independent identity and approved public file list.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S074",
+    "title": "[S074] Open-source licensing and third-party inventory",
+    "dependencies": "S073",
+    "acceptance": "Owner approves actual license and notices; no unlicensed copied materials.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S075",
+    "title": "[S075] Public bootstrap profile",
+    "dependencies": "S073,S074",
+    "acceptance": "Verify manifest, local qualification; no automatic remote creation or push.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S076",
+    "title": "[S076] Sanitize documentation and evidence",
+    "dependencies": "S073",
+    "acceptance": "Exclude employer references, credentials, draft research and unreviewed artwork; human review remains required.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S077",
+    "title": "[S077] Visibility-aware issue importer",
+    "dependencies": "S075",
+    "acceptance": "Explicit target and publication acknowledgement; duplicate prevention; bounded batches.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S078",
+    "title": "[S078] Cross-platform hosted qualification",
+    "dependencies": "S075",
+    "acceptance": "Linux, Windows, macOS, ARM64 standard hosted jobs; read-only token; actual remote passes.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S079",
+    "title": "[S079] Separate fast and extended qualification",
+    "dependencies": "S078",
+    "acceptance": "Quick regression on PR; finite manual replay, no schedules or chained jobs.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S080",
+    "title": "[S080] CodeQL security qualification",
+    "dependencies": "S078",
+    "acceptance": "Enable approved public CodeQL workflow, verify supported languages and permissions.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S081",
+    "title": "[S081] Dependency review and Dependabot",
+    "dependencies": "S074,S078",
+    "acceptance": "Review dependencies and pin Actions; enable dependency alerts and review.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S082",
+    "title": "[S082] Secret scanning and push protection",
+    "dependencies": "S073",
+    "acceptance": "Enable supported public repo scanning and push protection; test only synthetic markers.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S083",
+    "title": "[S083] Public contributor workflow isolation",
+    "dependencies": "S078",
+    "acceptance": "No secrets or write token to untrusted PRs; approve external workflows; no pull_request_target.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S084",
+    "title": "[S084] Repository rulesets and governance",
+    "dependencies": "S078,S083",
+    "acceptance": "Required checks, no force push/deletion, zero second reviewer only during solo phase; verify remotely.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S085",
+    "title": "[S085] GitHub API rate control",
+    "dependencies": "S077",
+    "acceptance": "Explicit capped batch, no blind retries, idempotent IDs; handle 403/429 and retry-after.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S086",
+    "title": "[S086] Build and software inventory",
+    "dependencies": "S074,S078",
+    "acceptance": "Build exact archive/wheel, inventory runtime dependencies, SHA-256, repeatable qualification.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S087",
+    "title": "[S087] Build provenance attestations",
+    "dependencies": "S086",
+    "acceptance": "Trusted approved release workflow; verify provenance against source revision.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S088",
+    "title": "[S088] Release promotion and approval",
+    "dependencies": "S086,S087",
+    "acceptance": "Publish same qualified bytes; manual approval, no automatic publisher.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S089",
+    "title": "[S089] Public container distribution",
+    "dependencies": "S086",
+    "acceptance": "Optional approved public GHCR only; budget review and pinned images.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S090",
+    "title": "[S090] GitHub Pages documentation",
+    "dependencies": "S075",
+    "acceptance": "Static docs source, no keys or dynamic backend, checked browser rendering.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S091",
+    "title": "[S091] Research classification",
+    "dependencies": "S073",
+    "acceptance": "Distinguish public candidate, private research and secrets; allowlisted exports only.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S092",
+    "title": "[S092] Public evidence export",
+    "dependencies": "S091,S056",
+    "acceptance": "Hash manifest, exact replay, source pin; human publication review.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S093",
+    "title": "[S093] Optional remote worker interface",
+    "dependencies": "S064",
+    "acceptance": "No worker hosting in zero-cost profile; future external execution requires separate authorization.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S094",
+    "title": "[S094] Distributed execution protocol",
+    "dependencies": "S093",
+    "acceptance": "Only finite permitted qualification jobs in hosted profile; no aggregate RAM assumption.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S095",
+    "title": "[S095] Public reproducibility qualification",
+    "dependencies": "S092",
+    "acceptance": "Independent clone and replay; preserve failures and all scope limits.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S096",
+    "title": "[S096] Open-source release acceptance",
+    "dependencies": "S073\u2013S095",
+    "acceptance": "Remote CI, licensing, rights, security and publication review complete.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S097",
+    "title": "[S097] GitHub-only free-tier profile",
+    "dependencies": "S075,S079",
+    "acceptance": "Public standard hosted labels only, no paid model, cache or routine artifacts; account spending controls verified.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S098",
+    "title": "[S098] Static research dashboard",
+    "dependencies": "S090",
+    "acceptance": "Offline-capable rendered site, searchable records, dark/light, no token or server.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S099",
+    "title": "[S099] Git-backed scientific notebook",
+    "dependencies": "S092",
+    "acceptance": "Versioned strict evidence records, hashes, pending owner approval, no automated promotion.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S100",
+    "title": "[S100] Browser-side research search",
+    "dependencies": "S098,S099",
+    "acceptance": "Filter notebook and backlog without network calls; safe text rendering.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S101",
+    "title": "[S101] Actions experiment catalog",
+    "dependencies": "S079,S097",
+    "acceptance": "Fixed named profiles and bounded manual workflow; no arbitrary command input.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S102",
+    "title": "[S102] Resource budget validation",
+    "dependencies": "S097,S101",
+    "acceptance": "Preflight public/runner/event scope, timeout, bounded Linux per-process limits; document limitations.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S103",
+    "title": "[S103] Parallel mathematical qualification",
+    "dependencies": "S078,S102",
+    "acceptance": "Max two parallel matrix jobs, independent fixtures; actual remote measurements.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S104",
+    "title": "[S104] Independent hosted verifier",
+    "dependencies": "S065,S103",
+    "acceptance": "Separate trusted code and acceptance spec; no generated code until isolation; signed receipts future.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S105",
+    "title": "[S105] Original research archive importer",
+    "dependencies": "S091,S092",
+    "acceptance": "Rights-approved R1\u2013R9 archives, quarantine, manifest, replay and profiling.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S106",
+    "title": "[S106] Automated computational profiling",
+    "dependencies": "S102,S105",
+    "acceptance": "Wall time, CPU, RSS semantics and exact operation metrics; compare equivalent workloads.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S107",
+    "title": "[S107] Optional AI research role specifications",
+    "dependencies": "S059,S097",
+    "acceptance": "Manual ChatGPT-assisted hypotheses; paid provider off; no private traces or untrusted executable input.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S108",
+    "title": "[S108] Evidence publication pipeline",
+    "dependencies": "S099,S095",
+    "acceptance": "Reviewed source commit, hash-backed note, reproducible evidence; no automated publication.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S109",
+    "title": "[S109] Quota and storage governance",
+    "dependencies": "S097,S085",
+    "acceptance": "No artifact/cache uploads by default, monitor owner usage and hard spending stop where supported.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S110",
+    "title": "[S110] GitHub Pages deployment",
+    "dependencies": "S098,S100",
+    "acceptance": "Enable main:/docs manually; verify portal build, domain and no private files.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S111",
+    "title": "[S111] Hosted-only security qualification",
+    "dependencies": "S083,S102,S110",
+    "acceptance": "Test blocked private events, unsupported profiles, dependency pins and PR privilege boundaries.",
+    "state": "open / needs review"
+  },
+  {
+    "id": "S112",
+    "title": "[S112] Cloud-native release acceptance",
+    "dependencies": "S096,S105,S111",
+    "acceptance": "Verified hosted qualification, license review, evidence reproducibility and zero-cost account settings.",
+    "state": "open / needs review"
+  }
+]

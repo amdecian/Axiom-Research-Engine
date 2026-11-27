@@ -32,3 +32,4 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python scripts/hosted.py --profile quick
+      - run: python scripts/hosted.py --profile portal-check

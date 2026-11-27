@@ -1,20 +1,29 @@
-# AXIOM Research Engine
+# AXIOM Research Engine — v0.4.0 publication candidate
 
 **Evidence before conclusions.**
 
-Public bootstrap in progress: the complete Python mathematical and offline research engine, test suite, campaign plans and hosted qualification entry points from v0.4.0 have been imported with verified original Git blob hashes. This is a staged import, not yet the full v0.4.0 publication candidate.
+GitHub-hosted mathematical research software: exact SAT counting, structured permanents, weighted XOR walk aggregation, modular arithmetic and a finite adaptive strategy loop. The public bootstrap is in progress; the core engine, tests, static research portal, notebook and work-slice manifests have been imported. This is not a claim of general SAT improvement, P=NP, or a formally verified autonomous research system.
 
-## Run the engine
+## Hosted qualification
 
-Requires Python 3.11+; no runtime dependencies. The recommended hosted path is the Actions tab: Free-tier qualification runs the unit tests and exact campaign; Bounded research regression provides manually selected fixed replay profiles.
+- [Cross-platform core qualification passed](https://github.com/amdecian/Axiom-Research-Engine/actions/runs/46065480354) on Windows, macOS, Linux x64 and Linux ARM64.
+- [Actions](https://github.com/amdecian/Axiom-Research-Engine/actions): Free-tier qualification checks the engine and generated portal; Bounded research regression is a manual finite replay.
+- [Research portal source](docs/index.html): enable GitHub Pages from main:/docs to serve this static application.
+- [Hosted engineering contract](docs/Hosted_Engineering_Contract.md) and [scientific program](docs/Scientific_Program.md).
+- [Engineering backlog](research/backlog.json): S001–S112; [scientific backlog](research/scientific-backlog.json): R10–R29.
+- [Evidence](evidence/) and [notebook](research/notebook/) preserve finite results and negative controls. The imported evidence describes the original local candidate run; remote qualification is separately referenced above.
+
+## Reproduce
+
+Python 3.11+; no third-party runtime dependencies.
 
     python scripts/hosted.py --profile quick
     python scripts/hosted.py --profile loop-replay
+    python scripts/hosted.py --profile portal-check
+    python scripts/backlog.py
 
-The adaptive loop uses trusted, declarative strategies, matched nonadaptive controls, exact finite oracles and deterministic evidence replay. It makes no model calls and executes no generated code. Its subprocesses are not a hardened sandbox.
+## Publication and operational limits
 
-## Hosting and safety
+Use standard public GitHub-hosted runners for finite project testing, qualification and reproducibility only. No paid inference, self-hosted servers, scheduled discovery or routine artifact uploads. Owner billing controls require verification. The original R1–R9 executable archives, remaining historical engineering documentation, binary replay archive and optional localhost dashboard are not yet imported. The companion archive remains excluded.
 
-Standard public GitHub-hosted runners only, bounded software regression and reproducibility jobs; no self-hosted infrastructure, paid inference, cron, routine artifact uploads or automatic releases. Account spending controls and administration settings require owner review.
-
-No general SAT speedup or P=NP proof is claimed. The local dashboard, static portal, full documentation and evidence import remain pending. See issue #1 for publication review, licensing, governance and backlog. Public visibility is not a license grant; the software license is pending owner approval. Do not submit confidential or employer-owned material.
+Public visibility is not a software license grant; licensing is pending owner approval. Do not submit confidential or employer-owned material. See [bootstrap issue #1](https://github.com/amdecian/Axiom-Research-Engine/issues/1).
