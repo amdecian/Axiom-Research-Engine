@@ -1,0 +1,17 @@
+# Production interface contract (proposed v1)
+
+Normative proposed target, not the current offline fixture protocol. Schema files use JSON Schema draft 2020-12; implementation must pin a validator and enable date/UUID format checks. All values are canonical UTF-8 JSON; exact integers that may exceed safe JS integer range are strings; rationals are reduced signed numerator/positive denominator strings with gcd 1. Hash canonical bytes using an explicitly pinned canonicalization standard (RFC 8785 or agreed restricted subset); signatures cover the schema version, canonical receipt without signature, context and key ID. The starter uses sorted JSON and hashes only, not RFC 8785 or signatures.
+
+Semantic checks beyond schemas: SAT `abs(literal)<=n`; count <= 2^n; no float for exact math. Budget is within administrator caps, `provider_enabled=false` implies zero calls/tokens/spend. Validate digest existence and ownership; authorized manifest hash unchanged at start. Lease expiry external to worker; controller verifies identity, job scope, active lease and matching source/environment hashes. `checks_passed<=checks_total`; finite_pass requires all mandatory checks; counterexample requires digest and witness; formal_checked requires exact statement hash, checker receipt, audited assumptions and import/axiom whitelist. Only evidence-plane identity can sign receipts. Failed or inconclusive result cannot promote a positive fact. Finite pass scopes restricted to tests. Reviewer may reject but cannot override a mathematical mismatch. Memory claim and receipt scopes must match; no orphan links or fabricated predecessors; review version lock. All updates append events, correction uses superseding record.
+
+## Target REST contract
+
+All mutations require authentication, role scope, `Idempotency-Key`, `If-Match` where versioned, and audited request ID. Success responses contain resource ID, revision, event digest and state; failures contain error code, correlation ID and sanitized message. See `openapi.yaml` for machine-readable endpoints. Event stream read-only, monotonic sequence and resumable cursor. No endpoint runs arbitrary commands or exposes hidden tests. Start and resume require explicit manifest approval. Pause stops new dispatch, stop revokes and kills leases, resume requires explicit review. Idempotent replay returns same result; different body with same key returns 409. Quota failures 429; invalid payload 422; auth 401/403; stale state 409. API must never convert timeout into UNSAT.
+
+## Prototype protocol
+
+`GET /` serves the local dashboard and `GET /api/v1/snapshot` returns JSON projection (schema_version 0.1). No other HTTP mutations. CLI `demo`, `approve`, `audit`, `snapshot`, `serve`. Single local writer; no production role management, concurrent approval guarantees, signatures or schema enforcement. All target contracts are design artifacts, with no implied implemented API.
+
+## v0.2 local extension
+
+`offline-plan.schema.json` describes the implemented finite trusted-campaign plan. The Python validator additionally enforces a 16 KiB input cap, whitespace checks, strict duplicate-key rejection and a maximum strategy/seed cross product of 16. `plan` previews the approval digest and `run` verifies it before starting any worker. This is not the production v1 protocol. Local memory approval now uses one SQLite write transaction; no role-based authorization or signed receipts are provided.

@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: Axiom control API (proposed)
+  version: '1.0.0'
+  description: Planned authenticated controller; only snapshot GET is implemented by the separate v0.1 prototype.
+servers:
+  - url: /api/v1
+security:
+  - bearerAuth: []
+paths:
+  /campaigns:
+    post:
+      operationId: draftCampaign
+      parameters:
+        - { name: Idempotency-Key, in: header, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: './campaign.schema.json' }
+      responses: { '201': { description: Draft created }, '422': { description: Invalid contract } }
+    get:
+      operationId: listCampaigns
+      responses: { '200': { description: Authorized campaign projections } }
+  /campaigns/{id}/{action}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: string, format: uuid } }
+      - { name: action, in: path, required: true, schema: { type: string, enum: [approve, start, pause, stop, resume] } }
+    post:
+      operationId: transitionCampaign
+      parameters:
+        - { name: Idempotency-Key, in: header, required: true, schema: { type: string } }
+        - { name: If-Match, in: header, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [manifest_digest, reason]
+              properties:
+                manifest_digest: { type: string, pattern: '^[a-f0-9]{64}$' }
+                reason: { type: string }
+      responses: { '202': { description: Transition accepted }, '403': { description: Denied }, '409': { description: State conflict }, '429': { description: Quota denied } }
+  /hypotheses:
+    post:
+      operationId: proposeHypothesis
+      parameters:
+        - { name: Idempotency-Key, in: header, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: './hypothesis.schema.json' }
+      responses: { '201': { description: Proposal recorded }, '422': { description: Invalid proposal } }
+  /receipts:
+    post:
+      operationId: ingestVerifierReceipt
+      parameters:
+        - { name: Idempotency-Key, in: header, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: './receipt.schema.json' }
+      responses: { '201': { description: Receipt accepted }, '403': { description: Signature or identity denied }, '409': { description: Duplicate conflict } }
+  /lessons:
+    post:
+      operationId: approveLesson
+      parameters:
+        - { name: Idempotency-Key, in: header, required: true, schema: { type: string } }
+        - { name: If-Match, in: header, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: './lesson.schema.json' }
+      responses: { '201': { description: Lesson appended }, '409': { description: Stale review } }
+    get:
+      operationId: listLessons
+      responses: { '200': { description: Authorized reviewed memory } }
+  /attempts/{id}:
+    get:
+      operationId: getAttempt
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string, format: uuid } }
+      responses: { '200': { description: Attempt projection }, '404': { description: Not found } }
+  /events:
+    get:
+      operationId: streamEvents
+      parameters:
+        - { name: after, in: query, schema: { type: integer, minimum: 0 } }
+      responses: { '200': { description: Authorized ordered event stream, content: { text/event-stream: { schema: { type: string } } } } }
+  /snapshot:
+    get:
+      operationId: getSnapshot
+      responses: { '200': { description: Authorized dashboard projection } }
+components:
+  securitySchemes:
+    bearerAuth: { type: http, scheme: bearer }

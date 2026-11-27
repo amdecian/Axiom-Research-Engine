@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiom:contract:lesson:1",
+  "title": "lesson",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "lesson_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "project_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4096
+      },
+      "minItems": 0
+    },
+    "grade": {
+      "type": "string",
+      "enum": [
+        "hypothesis",
+        "finite_pass",
+        "counterexample",
+        "derived_pending_review",
+        "derived_reviewed",
+        "formal_checked",
+        "superseded"
+      ]
+    },
+    "evidence_digests": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      },
+      "minItems": 1
+    },
+    "reviewer_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "revision_parent": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "approval_event_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4096
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "lesson_id",
+    "project_id",
+    "claim",
+    "scope",
+    "assumptions",
+    "grade",
+    "evidence_digests",
+    "reviewer_id",
+    "reviewed_at",
+    "revision_parent",
+    "approval_event_digest",
+    "tags"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AXIOM offline-1 finite campaign",
+  "type":"object", "additionalProperties":false,
+  "required":["schema_version","name","strategies","seeds","attempt_timeout_seconds","campaign_timeout_seconds"],
+  "properties":{
+    "schema_version":{"const":"offline-1"},
+    "name":{"type":"string","minLength":1,"maxLength":120},
+    "strategies":{"type":"array","minItems":1,"maxItems":5,"uniqueItems":true,"items":{"enum":["sat.cached_split","sat.components","coef.full_quadratic","coef.all_orders","coef.omit_h"]}},
+    "seeds":{"type":"array","minItems":1,"maxItems":4,"uniqueItems":true,"items":{"type":"integer","minimum":0,"maximum":4294967295}},
+    "attempt_timeout_seconds":{"type":"integer","minimum":1,"maximum":120},
+    "campaign_timeout_seconds":{"type":"integer","minimum":1,"maximum":1200}
+  }
+}

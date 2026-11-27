@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Trusted SAT strategy configuration","type":"object","additionalProperties":false,"required":["branch","unit","components","memo"],"properties":{"branch":{"enum":["shortest","frequency","balanced"]},"unit":{"type":"boolean"},"components":{"type":"boolean"},"memo":{"type":"boolean"}}}
