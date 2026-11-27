@@ -1,0 +1,17 @@
+{
+  "schema_version": "hosted-1",
+  "target_additional_monthly_cost_usd": 0,
+  "public_repositories_only": true,
+  "runner_labels": ["ubuntu-24.04", "windows-2025", "macos-15", "ubuntu-24.04-arm"],
+  "max_parallel_per_matrix": 2,
+  "job_timeout_minutes": 10,
+  "linux_per_process_address_space_mib": 3072,
+  "linux_per_file_limit_mib": 64,
+  "artifact_uploads": false,
+  "dependency_cache_uploads": false,
+  "paid_ai_calls": false,
+  "self_hosted_runners": false,
+  "scheduled_campaigns": false,
+  "pages_source": "main:/docs",
+  "remote_settings_required": true
+}

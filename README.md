@@ -2,17 +2,18 @@
 
 **Evidence before conclusions.**
 
-AXIOM is an independent mathematical research software project investigating exact SAT counting, structured permanents, shared arithmetic, algorithm discovery and formal verification.
+Public bootstrap in progress. The exact mathematical core from the v0.4.0 publication candidate has been imported, with original Git blob hashes verified. This is a staged subset, not the full v0.4.0 release.
 
-## Bootstrap status
+## Run the mathematical core
 
-This is the initial repository setup. The v0.4.0 Free Open Research Edition source import, licensing decision and hosted qualification are pending. No general SAT complexity improvement or proof of P = NP is claimed.
+Requires Python 3.11 or newer. No third-party dependencies.
 
-## Operating requirements
+    python -m unittest discover -s tests -v
 
-- Standard GitHub-hosted runners only, for bounded software development, regression and reproducibility workloads.
-- No self-hosted infrastructure, metered AI calls or scheduled discovery campaigns in the initial profile.
-- Preserve exact verification, negative findings and reproducible evidence.
-- Review ownership, licensing and research evidence before publication. Do not import private or employer-owned materials.
+The initial imported suite tests exact SAT counting, truncated polynomial permanents, signed XOR walk aggregation, modular division and CRT reconstruction. Finite tests are not proofs of general correctness or better asymptotic complexity.
 
-The repository is public; do not submit confidential information or credentials.
+## Hosting and safety
+
+Use standard GitHub-hosted runners for bounded software regression and reproducibility only. No self-hosted servers, paid inference, scheduled research, automatic publishing or routine artifact uploads. Account billing and repository administration settings require owner review.
+
+The remaining application, research-loop implementation, documentation, historical evidence and licensing decision are tracked in issue #1. Do not submit confidential or employer-owned material. Public visibility is not an open-source license grant; licensing is pending explicit owner approval.
