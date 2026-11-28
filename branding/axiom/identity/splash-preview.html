@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>AXIOM / Crossed-orbit splash preview</title><style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0b1213;color:#e9f4f0;font:16px/1.5 system-ui,Arial,sans-serif}main{max-width:540px;padding:24px;text-align:center}button{font:inherit;color:#e9f4f0;background:#142221;border:1px solid #41d6a0;border-radius:8px;padding:10px 18px;cursor:pointer}button:focus-visible{outline:2px solid #41d6a0;outline-offset:3px}p{color:#a6bdb6}</style></head><body>
+<!-- AXIOM STARTUP COMPONENT BEGIN -->
+<style>
+#ax-start-dialog{box-sizing:border-box;position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:clamp(8px,2vw,24px);overflow:auto;color:#e9f4f0;background:#0b1213;font:14px/1.5 system-ui,'Segoe UI',Arial,sans-serif;z-index:2147483647}
+#ax-start-dialog:not([open]){display:none}#ax-start-dialog::backdrop{background:#0b1213}
+#ax-start-dialog .ax-start-panel{box-sizing:border-box;width:min(960px,100%);min-height:100%;margin:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+#ax-start-dialog svg{display:block;width:min(100%,960px);height:auto;max-height:72vh;aspect-ratio:16/9;flex:none;background:radial-gradient(ellipse at 50% 38%,#152b27 0%,#0b1213 55%);border-radius:12px}
+#ax-start-dialog p{margin:0;text-align:center;color:#a6bdb6;max-width:65ch}#ax-start-dialog .ax-start-controls{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+#ax-start-dialog button{font:600 14px/1.3 system-ui,'Segoe UI',Arial,sans-serif;color:#e9f4f0;border:1px solid #456d60;background:#142221;border-radius:8px;padding:9px 16px;cursor:pointer}
+#ax-start-dialog button:focus-visible{outline:2px solid #41d6a0;outline-offset:3px}#ax-start-dialog button:disabled{opacity:.6;cursor:default}
+#ax-start-dialog [hidden],#ax-start-notice[hidden]{display:none!important}#ax-start-notice{margin:0;padding:10px 16px;background:#142221;color:#e9f4f0;border-bottom:1px solid #456d60;font:14px/1.5 system-ui,Arial,sans-serif}#ax-start-dialog progress{width:min(320px,85%);height:5px;accent-color:#41d6a0;background:#29413e;border:0;border-radius:3px}#ax-start-dialog progress::-webkit-progress-bar{background:#29413e;border-radius:3px}#ax-start-dialog progress::-webkit-progress-value{background:#41d6a0;border-radius:3px}#ax-start-dialog progress::-moz-progress-bar{background:#41d6a0;border-radius:3px}
+@media(prefers-reduced-motion:reduce){#ax-start-dialog #ax-start-electrons{visibility:hidden}}
+</style>
+<dialog id="ax-start-dialog" aria-label="AXIOM startup" aria-describedby="ax-start-status">
+  <div class="ax-start-panel">
+<svg id="ax-start-scene" viewBox="0 0 1600 900" aria-labelledby="ax-start-title ax-start-desc" role="img">
+      <title id="ax-start-title">AXIOM startup splash preview</title>
+      <desc id="ax-start-desc">A centered AXIOM emblem with two crossed electron-style orbitals and animated emerald highlights.</desc>
+      <defs>
+        <linearGradient id="ax-start-lineGlow" x1="0" x2="1">
+          <stop offset="0%" stop-color="#41D6A0" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#41D6A0" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#41D6A0" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="ax-start-coreGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#B6F7D8" stop-opacity=".98"/>
+          <stop offset="45%" stop-color="#41D6A0" stop-opacity=".52"/>
+          <stop offset="100%" stop-color="#41D6A0" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="ax-start-blur16"><feGaussianBlur stdDeviation="16"/></filter>
+        <filter id="ax-start-blur28"><feGaussianBlur stdDeviation="28"/></filter>
+      </defs>
+
+      <g id="ax-start-bgfx" opacity="0.9">
+        <circle cx="800" cy="350" r="235" fill="#41D6A0" opacity="0.055" filter="url(#ax-start-blur28)"/>
+        <circle cx="800" cy="350" r="125" fill="#B6F7D8" opacity="0.05" filter="url(#ax-start-blur16)"/>
+        
+        <path d="M160 165H1440" stroke="#41D6A0" stroke-opacity="0.08" stroke-width="1.5"/>
+      </g>
+
+      <g id="ax-start-orbitalSystem" transform="translate(800 350)">
+        <ellipse id="ax-start-orbitA_inner" cx="0" cy="0" rx="245" ry="90" fill="none" stroke="#41D6A0" stroke-opacity="0.64" stroke-width="3.2" transform="rotate(38)"/>
+        <ellipse id="ax-start-orbitB_inner" cx="0" cy="0" rx="245" ry="90" fill="none" stroke="#41D6A0" stroke-opacity="0.64" stroke-width="3.2" transform="rotate(-38)"/>
+
+        <circle id="ax-start-coreAura" cx="0" cy="0" r="82" fill="url(#ax-start-coreGlow)" opacity="0.78"/>
+        <circle id="ax-start-core" cx="0" cy="0" r="12" fill="#B6F7D8"/>
+
+        <g id="ax-start-mark" opacity="0.98">
+          <path id="ax-start-aShape" d="M-60 70 L0 -65 L60 70 M-34 19 H34" fill="none" stroke="#41D6A0" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle id="ax-start-aNode" cx="0" cy="19" r="9" fill="#B6F7D8"/>
+          <path d="M-46 92H46" fill="none" stroke="#B6F7D8" stroke-opacity="0.55" stroke-width="2.5"/>
+        </g>
+
+        <g id="ax-start-electrons">
+          <circle id="ax-start-electronA" cx="193.1" cy="150.8" r="9" fill="#B6F7D8" stroke="#41D6A0" stroke-width="3"/>
+          <circle id="ax-start-electronB" cx="-193.1" cy="150.8" r="9" fill="#B6F7D8" stroke="#41D6A0" stroke-width="3"/>
+        </g>
+      </g>
+
+      <g id="ax-start-titles" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+        <text id="ax-start-eyebrow" x="800" y="550" fill="#41D6A0" font-size="24" letter-spacing="7" opacity="1">MATHEMATICAL RESEARCH</text>
+        <text id="ax-start-brand" x="800" y="675" fill="#E9F4F0" font-size="116" font-weight="700" letter-spacing="12" opacity="1">AXIOM</text>
+        <text id="ax-start-subtitle" x="800" y="738" fill="#A6BDB6" font-size="34" letter-spacing="4" opacity="1">RESEARCH ENGINE</text>
+      <text x="800" y="800" fill="#41D6A0" font-size="28">Evidence before conclusions.</text></g>
+    </svg>
+    <p id="ax-start-status" role="status">Opening the interface…</p>
+    <progress id="ax-start-progress" max="10000" value="0" aria-label="Presentation time, not initialization progress"></progress>
+    <p id="ax-start-caption">Startup presentation · not research progress</p>
+    <div class="ax-start-controls"><button id="ax-start-skip" type="button" autofocus>Skip animation</button></div>
+  </div>
+</dialog>
+<p id="ax-start-notice" hidden role="status"></p>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById('ax-start-'+id),dialog=$('dialog'),status=$('status'),progress=$('progress'),skip=$('skip'),motion=matchMedia('(prefers-reduced-motion: reduce)');
+const DURATION=10000,READINESS_TIMEOUT=20000;
+let raf=0,timeout=0,last=null,elapsed=0,active=false,ready=false,skipped=false;
+function point(node,angle,tilt){
+ const a=angle*Math.PI/180,t=tilt*Math.PI/180,x=245*Math.cos(a),y=90*Math.sin(a);
+ node.setAttribute('cx',x*Math.cos(t)-y*Math.sin(t));node.setAttribute('cy',x*Math.sin(t)+y*Math.cos(t));
+}
+function paint(){
+ const t=Math.min(elapsed,DURATION),reduced=motion.matches;
+ if(!reduced){point($('electronA'),t/2600*360,38);point($('electronB'),180-t/3100*360,-38);}
+ $('coreAura').setAttribute('opacity',reduced?'.78':String(.74+.12*Math.sin(t/650)));
+ progress.value=skipped||reduced?DURATION:t;
+}
+function clear(){cancelAnimationFrame(raf);raf=0;clearTimeout(timeout);timeout=0;last=null;active=false;}
+function close(outcome){if(!active)return;clear();dialog.close();if(outcome==='timeout'||outcome==='error'){$('notice').textContent=outcome==='timeout'?'Startup presentation ended while interface loading was still pending. The application has not reported readiness.':'Startup presentation ended after an interface error.';$('notice').hidden=false;}dialog.dispatchEvent(new CustomEvent('axiom-startup-end',{detail:outcome}));}
+function maybeFinish(){
+ if(!active)return;
+ const presentationDone=skipped||motion.matches||elapsed>=DURATION;
+ if(ready&&presentationDone){close('ready');return;}
+ if(presentationDone){if(status.textContent!=='Waiting for the interface to finish loading…')status.textContent='Waiting for the interface to finish loading…';skip.disabled=true;}
+ else{skip.disabled=false;if(ready&&status.textContent!=='Interface loaded · completing startup presentation')status.textContent='Interface loaded · completing startup presentation';}
+}
+function tick(now){raf=0;if(!active||document.hidden){last=null;return;}if(last!==null)elapsed=Math.min(DURATION,elapsed+Math.max(0,now-last));last=now;paint();maybeFinish();schedule();}
+function schedule(){if(active&&!document.hidden&&!raf&&!skipped&&!motion.matches&&elapsed<DURATION)raf=requestAnimationFrame(tick);}
+function dismissPresentation(){if(!active)return;skipped=true;cancelAnimationFrame(raf);raf=0;last=null;paint();maybeFinish();}
+function signalReady(ok){$('notice').hidden=true;if(!active)return;if(!ok){close('unavailable');return;}ready=true;clearTimeout(timeout);timeout=0;maybeFinish();}
+function start(){
+ if(active)return;$('notice').hidden=true;ready=false;skipped=false;elapsed=0;last=null;skip.disabled=false;status.textContent='Opening the interface…';
+ try{if(typeof dialog.showModal!=='function')return;dialog.showModal();}catch(_){return;}
+ active=true;paint();timeout=setTimeout(()=>close('timeout'),READINESS_TIMEOUT);maybeFinish();schedule();
+}
+window.AxiomStartup=Object.freeze({ready:()=>signalReady(true),unavailable:()=>signalReady(false),start});
+skip.addEventListener('click',dismissPresentation);dialog.addEventListener('cancel',event=>{event.preventDefault();dismissPresentation();});
+document.addEventListener('visibilitychange',()=>{last=null;if(document.hidden){cancelAnimationFrame(raf);raf=0;}else schedule();});
+motion.addEventListener('change',()=>{if(!active)return;cancelAnimationFrame(raf);raf=0;last=null;paint();maybeFinish();schedule();});
+// Fail open on unexpected UI errors; never hide an existing application error behind branding.
+window.addEventListener('error',()=>{if(active)close('error');});
+window.addEventListener('unhandledrejection',()=>{if(active)close('error');});
+start();
+})();
+</script>
+<!-- AXIOM STARTUP COMPONENT END -->
+<main><h1>AXIOM Research Engine</h1><p>Startup animation preview complete. This standalone file does not load the research engine, run experiments, or access evidence.</p><button id="replay" type="button">Replay splash</button></main>
+<script>
+const replay=document.getElementById('replay');function playPreview(){window.AxiomStartup?.start();window.AxiomStartup?.ready();}replay.addEventListener('click',playPreview);window.AxiomStartup?.ready();
+</script></body></html>
