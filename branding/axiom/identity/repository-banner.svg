@@ -14,7 +14,7 @@
 <text x="88" y="341" fill="#E9F4F0" font-size="58">Research Engine</text>
 <text x="90" y="425" fill="#41D6A0" font-size="35">Evidence before conclusions.</text>
 </g>
-<g transform="translate(1220 285) scale(1.48)">
+<g transform="translate(1220 247) scale(1.32)">
 <circle r="202" fill="url(#halo)" opacity=".67"/>
 <g fill="none" stroke="#41D6A0" stroke-width="4.8" stroke-opacity="0.76"><ellipse rx="245" ry="90" transform="rotate(38)"/><ellipse rx="245" ry="90" transform="rotate(-38)"/></g>
 <circle r="75" fill="url(#core)" opacity=".72"/>
