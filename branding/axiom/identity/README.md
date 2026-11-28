@@ -1,4 +1,4 @@
-# AXIOM / Visual identity 01
+# AXIOM / Visual identity 02 — crossed orbits
 
 ![AXIOM visual identity board](brand-board.svg)
 
@@ -9,11 +9,11 @@
 
 ## 1. Identity system
 
-The geometric A is constructed from two convergent vectors, a crossbar and a central evidence node. The graph motif represents a conceptual progression from hypothesis to verification; it is not a plot, benchmark, proof or depiction of a specific mathematical construction. The new kit evolves the original public artwork without replacing its original files.
+The active identity follows the existing crossed-orbit startup artwork: two fixed ellipses at +38° and −38° around the geometric AXIOM A, a central evidence node, and one electron highlight on each path. The ellipse radius ratio (245:90) is derived from the startup component. Static assets retain the same geometry and use thicker strokes at small sizes. This is a conceptual atomic motif, not a physical electron model, a scientific plot, benchmark or proof. The earlier triangular identity is superseded in active assets; original concept files remain as historical references.
 
 | Asset | Intended use | Dimensions / format |
 | --- | --- | --- |
-| [Repository banner](repository-banner.svg) | GitHub README and document cover | 1600 × 600 SVG (8:3) |
+| [Repository banner](repository-banner-orbital.svg) | GitHub README and document cover | 1600 × 600 SVG (8:3) |
 | [Dark wordmark](wordmark-dark.svg) | Dark presentations and documentation | 840 × 208 SVG |
 | [Light wordmark](wordmark-light.svg) | Light presentations and documentation | 840 × 208 SVG |
 | [Dark emblem](icon-dark.svg) | Dark UI, repository identity and avatar source | 144 × 144 SVG |
@@ -22,7 +22,7 @@ The geometric A is constructed from two convergent vectors, a crossbar and a cen
 | [Brand board](brand-board.svg) | Visual reference for maintainers | 1440 × 900 SVG |
 | [Research flow](research-flow.svg) | Conceptual evidence lifecycle | 1440 × 340 SVG |
 
-All vector assets are editable vectors with fixed viewBoxes, self-contained colors and descriptive titles. They contain no remote resources, embedded executable content or third-party marks.
+All vector assets are editable vectors with fixed viewBoxes, self-contained colors and descriptive titles. `repository-banner.svg` is a byte-identical compatibility copy of `repository-banner-orbital.svg`; the latter is the canonical README path so the revised artwork has a fresh URL. They contain no remote resources, embedded executable content or third-party marks.
 
 <p>
   <img src="icon-dark.svg" width="96" alt="AXIOM dark emblem">
@@ -61,13 +61,13 @@ Use the light green `#09694E` on paper; do not use bright emerald or evidence mi
 
 - Use system-ui / Segoe UI / Arial for interface and document text; use system monospace for identifiers, hashes, code and exact arithmetic output. SVG artwork uses local Arial/Helvetica and monospace fallbacks; no fonts are distributed.
 - Reserve wide letter spacing for short uppercase labels. Use sentence case for headings and technical explanations; use tabular numerals for comparisons.
-- Preserve native asset aspect ratio and at least one evidence-node diameter of clear space around the emblem. Use the emblem alone below 160 px of available wordmark width; the intended minimum emblem size is 24 px. Never stretch or crop wordmark text.
+- Preserve native asset aspect ratio and at least one electron-highlight diameter of clear space around the orbital emblem. Keep both ellipses at ±38° and retain the central A; do not rotate the whole mark or add a third orbit. Use the emblem alone below 160 px of available wordmark width; use 32 px or larger for the full orbital emblem and verify legibility at the intended size. Never stretch or crop wordmark text.
 - Keep graphics subordinate to the scientific content. No decorative status gradients, robot imagery, third-party logos or invented data visualizations.
 - Prefer dark surfaces for branded headers; use the light wordmark for white documents. Supply meaningful alt text on all informative graphics; maintain keyboard focus and reduced-motion support in interfaces.
 
 ## 4. Repository layout standard
 
-The root README starts with a single repository banner, a text title, concise scientific scope and research-status disclaimer. Navigation proceeds to research domains, evidence, reproducibility, repository map and governance. Keep run references explicitly historical unless they refer to the current commit. Avoid external badge trackers and remote images. All branding assets are local to Git; no Pages or CI settings are required to render the README.
+The root README starts with the crossed-orbit repository banner, a text title, concise scientific scope and research-status disclaimer. Navigation proceeds to research domains, evidence, reproducibility, repository map and governance. Keep run references explicitly historical unless they refer to the current commit. Avoid external badge trackers and remote images. All branding assets are local to Git; no Pages or CI settings are required to render the README.
 
 The public static portal is generated from its existing template and research records; do not hand-edit generated output. The initial-page startup component is shared verbatim between the preview, dashboard and portal template. Preserve the existing portal data payload, light/dark theme controls, and dashboard refresh/navigation behavior.
 
@@ -83,4 +83,4 @@ Respect the [disclosure boundary](../../../docs/Disclosure_Boundary.md) and [con
 
 For a GitHub social preview, export the social SVG to a 1280 × 640 PNG without stretching and upload it through the repository settings after owner approval. The vector is the source artwork, not an indication that social preview metadata has been configured. Check the crop and legibility in the target service before publishing.
 
-Original concept files and alternate names remain under [branding](../../README.md). Treat this new kit as a working identity until ownership, licensing and name rights are approved. Do not claim trademark registration. Review banner rendering in GitHub light and dark modes, minimum-size icons, mobile readability and relative asset links before accepting a branding change. Preserve the prior Git revision for rollback.
+Original concept files and alternate names remain under [branding](../../README.md) as historical references. The previous triangular hero and wordmarks are recoverable from the prior main revision; do not use them for new AXIOM material. Treat this new kit as a working identity until ownership, licensing and name rights are approved. Do not claim trademark registration. Review banner rendering in GitHub light and dark modes, minimum-size icons, mobile readability and relative asset links before accepting a branding change. Preserve the prior Git revision for rollback.

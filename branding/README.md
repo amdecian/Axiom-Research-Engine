@@ -1,16 +1,16 @@
 # AXIOM / Branding
 
-![AXIOM Research Engine working identity](axiom/identity/repository-banner.svg)
+![AXIOM Research Engine crossed-orbit working identity](axiom/identity/repository-banner-orbital.svg)
 
-The AXIOM emerald/graphite concept is the primary **working presentation** for this repository. It is not a trademark clearance, license grant or final identity approval.
+The AXIOM crossed-electron orbital identity (revision 02) is the primary **working presentation** for this repository, using the same two fixed ±38° orbital paths as the application startup animation. It is not a trademark clearance, license grant or final identity approval.
 
 ## Identity kit
 
 [Visual identity guide and assets](axiom/identity/README.md) · [Brand board](axiom/identity/brand-board.svg) · [Original AXIOM guide](axiom/BRAND_GUIDE.md) · [Theme tokens (JSON)](axiom/tokens.json) · [Theme tokens (CSS)](axiom/tokens.css)
 
-The new vector kit is an evolution of the existing public concept. The original concept assets, tokens and all alternatives remain unchanged for historical traceability.
+The active identity kit uses crossed-orbit artwork across the repository banner, dark/light emblems and wordmarks, social artwork, and brand board. The original three concept packages, their tokens and the application splash source remain unchanged. The earlier triangular hero is superseded and remains recoverable from Git history.
 
-## Original concepts
+## Historical concepts (reference only)
 
 | Concept | Direction | Assets |
 | --- | --- | --- |

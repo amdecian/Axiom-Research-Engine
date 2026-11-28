@@ -1,13 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
-  <title id="title">AXIOM visual identity board</title>
-  <desc id="desc">Working identity: dark and light wordmarks, six palette colors, and typography. Provisional name and branding.</desc>
+  <title id="title">AXIOM visual identity 02 — crossed orbits</title>
+  <desc id="desc">Dark and light crossed-orbit wordmarks, emblem, palette, typography, and brand usage. Two crossed electron-style ellipses at plus and minus 38 degrees surround the geometric AXIOM A and its evidence node. Conceptual artwork, not a physical electron model.</desc>
 <rect width="1440" height="900" fill="#0B1213"/><path d="M0 0H1440" stroke="#41D6A0" stroke-width="10"/>
-<g font-family="Arial, Helvetica, sans-serif"><text x="56" y="70" fill="#41D6A0" font-size="20" letter-spacing="4" font-weight="700">AXIOM / VISUAL IDENTITY 01</text><text x="56" y="132" fill="#E9F4F0" font-size="47" font-weight="700">Evidence before conclusions.</text>
-<rect x="56" y="174" width="650" height="238" rx="14" fill="#142221"/><rect x="734" y="174" width="650" height="238" rx="14" fill="#F5FAF8"/>
-<g transform="translate(80 224) scale(1)"><path d="M25 116 72 24 119 116 M47 83H97" fill="none" stroke="#41D6A0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="72" cy="83" r="8" fill="#B6F7D8"/><path d="M36 128H108" stroke="#B6F7D8" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/></g><g transform="translate(758 224) scale(1)"><path d="M25 116 72 24 119 116 M47 83H97" fill="none" stroke="#09694E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="72" cy="83" r="8" fill="#142C26"/><path d="M36 128H108" stroke="#09694E" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/></g>
-<text x="253" y="294" fill="#E9F4F0" font-size="62" font-weight="700" letter-spacing="3">AXIOM</text><text x="257" y="333" fill="#41D6A0" font-size="23" letter-spacing="2">RESEARCH ENGINE</text><text x="932" y="294" fill="#142C26" font-size="62" font-weight="700" letter-spacing="3">AXIOM</text><text x="936" y="333" fill="#09694E" font-size="23" letter-spacing="2">RESEARCH ENGINE</text>
-<text x="56" y="468" fill="#A6BDB6" font-size="18" font-weight="700" letter-spacing="3">CORE PALETTE</text>
-<g transform="translate(56 492)"><rect width="208" height="120" rx="8" fill="#0B1213" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#E9F4F0" font-size="16" font-weight="700">GRAPHITE</text><text x="14" y="102" fill="#E9F4F0" font-size="17" font-family="Consolas, Liberation Mono, monospace">#0B1213</text></g><g transform="translate(280 492)"><rect width="208" height="120" rx="8" fill="#142221" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#E9F4F0" font-size="16" font-weight="700">DEEP FOREST</text><text x="14" y="102" fill="#E9F4F0" font-size="17" font-family="Consolas, Liberation Mono, monospace">#142221</text></g><g transform="translate(504 492)"><rect width="208" height="120" rx="8" fill="#41D6A0" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#0B1213" font-size="16" font-weight="700">EMERALD</text><text x="14" y="102" fill="#0B1213" font-size="17" font-family="Consolas, Liberation Mono, monospace">#41D6A0</text></g><g transform="translate(728 492)"><rect width="208" height="120" rx="8" fill="#B6F7D8" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#0B1213" font-size="16" font-weight="700">EVIDENCE MINT</text><text x="14" y="102" fill="#0B1213" font-size="17" font-family="Consolas, Liberation Mono, monospace">#B6F7D8</text></g><g transform="translate(952 492)"><rect width="208" height="120" rx="8" fill="#F5FAF8" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#142C26" font-size="16" font-weight="700">PAPER</text><text x="14" y="102" fill="#142C26" font-size="17" font-family="Consolas, Liberation Mono, monospace">#F5FAF8</text></g><g transform="translate(1176 492)"><rect width="208" height="120" rx="8" fill="#09694E" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#FFFFFF" font-size="16" font-weight="700">LIGHT ACCENT</text><text x="14" y="102" fill="#FFFFFF" font-size="17" font-family="Consolas, Liberation Mono, monospace">#09694E</text></g>
-<path d="M56 655H1384" stroke="#29413E" stroke-width="2"/>
-<text x="56" y="704" fill="#A6BDB6" font-size="18" letter-spacing="3" font-weight="700">TYPE / VOICE</text><text x="56" y="760" fill="#E9F4F0" font-size="40" font-weight="700">Precision. Reproducibility.</text><text x="58" y="807" fill="#A6BDB6" font-size="24">System sans-serif for reading; monospace for code, IDs and hashes.</text><text x="58" y="863" fill="#41D6A0" font-size="19">Working identity · name and rights pending owner review</text></g>
+<g font-family="Arial, Helvetica, sans-serif"><text x="56" y="70" fill="#41D6A0" font-size="20" letter-spacing="4" font-weight="700">AXIOM / VISUAL IDENTITY 02</text><text x="56" y="133" fill="#E9F4F0" font-size="47" font-weight="700">Evidence before conclusions.</text>
+<rect x="56" y="172" width="650" height="238" rx="14" fill="#142221"/><rect x="734" y="172" width="650" height="238" rx="14" fill="#F5FAF8"/>
+<g transform="translate(175 290) scale(0.42)">
+
+<g fill="none" stroke="#41D6A0" stroke-width="12" stroke-opacity="1"><ellipse rx="245" ry="90" transform="rotate(38)"/><ellipse rx="245" ry="90" transform="rotate(-38)"/></g>
+
+<circle r="13" fill="#B6F7D8"/>
+<path d="M-60 70 L0 -65 L60 70 M-34 19 H34" fill="none" stroke="#41D6A0" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cy="19" r="12" fill="#B6F7D8"/>
+<path d="M-46 92H46" fill="none" stroke="#41D6A0" stroke-opacity=".82" stroke-width="7" stroke-linecap="round"/>
+<circle cx="200.736" cy="121.539" r="17" fill="#B6F7D8" stroke="#41D6A0" stroke-width="7"/>
+<circle cx="-153.834" cy="166.643" r="17" fill="#B6F7D8" stroke="#41D6A0" stroke-width="7"/>
+</g><g transform="translate(853 290) scale(0.42)">
+
+<g fill="none" stroke="#09694E" stroke-width="12" stroke-opacity="1"><ellipse rx="245" ry="90" transform="rotate(38)"/><ellipse rx="245" ry="90" transform="rotate(-38)"/></g>
+
+<circle r="13" fill="#142C26"/>
+<path d="M-60 70 L0 -65 L60 70 M-34 19 H34" fill="none" stroke="#09694E" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cy="19" r="12" fill="#142C26"/>
+<path d="M-46 92H46" fill="none" stroke="#09694E" stroke-opacity=".82" stroke-width="7" stroke-linecap="round"/>
+<circle cx="200.736" cy="121.539" r="17" fill="#142C26" stroke="#09694E" stroke-width="7"/>
+<circle cx="-153.834" cy="166.643" r="17" fill="#142C26" stroke="#09694E" stroke-width="7"/>
+</g>
+<text x="288" y="291" fill="#E9F4F0" font-size="62" font-weight="700" letter-spacing="3">AXIOM</text><text x="291" y="334" fill="#41D6A0" font-size="22" letter-spacing="2">RESEARCH ENGINE</text>
+<text x="966" y="291" fill="#142C26" font-size="62" font-weight="700" letter-spacing="3">AXIOM</text><text x="969" y="334" fill="#09694E" font-size="22" letter-spacing="2">RESEARCH ENGINE</text>
+<text x="56" y="468" fill="#A6BDB6" font-size="18" letter-spacing="3" font-weight="700">CORE PALETTE</text>
+<g transform="translate(56 492)"><rect width="208" height="120" rx="8" fill="#0B1213" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#E9F4F0" font-size="16" font-weight="700">GRAPHITE</text><text x="14" y="102" fill="#E9F4F0" font-size="17" font-family="Consolas, Liberation Mono, monospace">#0B1213</text></g>
+<g transform="translate(280 492)"><rect width="208" height="120" rx="8" fill="#142221" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#E9F4F0" font-size="16" font-weight="700">DEEP FOREST</text><text x="14" y="102" fill="#E9F4F0" font-size="17" font-family="Consolas, Liberation Mono, monospace">#142221</text></g>
+<g transform="translate(504 492)"><rect width="208" height="120" rx="8" fill="#41D6A0" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#0B1213" font-size="16" font-weight="700">EMERALD</text><text x="14" y="102" fill="#0B1213" font-size="17" font-family="Consolas, Liberation Mono, monospace">#41D6A0</text></g>
+<g transform="translate(728 492)"><rect width="208" height="120" rx="8" fill="#B6F7D8" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#0B1213" font-size="16" font-weight="700">EVIDENCE MINT</text><text x="14" y="102" fill="#0B1213" font-size="17" font-family="Consolas, Liberation Mono, monospace">#B6F7D8</text></g>
+<g transform="translate(952 492)"><rect width="208" height="120" rx="8" fill="#F5FAF8" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#142C26" font-size="16" font-weight="700">PAPER</text><text x="14" y="102" fill="#142C26" font-size="17" font-family="Consolas, Liberation Mono, monospace">#F5FAF8</text></g>
+<g transform="translate(1176 492)"><rect width="208" height="120" rx="8" fill="#09694E" stroke="#52616A" stroke-opacity=".6"/><text x="14" y="77" fill="#FFFFFF" font-size="16" font-weight="700">LIGHT ACCENT</text><text x="14" y="102" fill="#FFFFFF" font-size="17" font-family="Consolas, Liberation Mono, monospace">#09694E</text></g>
+<path d="M56 655H1384" stroke="#29413E" stroke-width="2"/><text x="56" y="700" fill="#A6BDB6" font-size="18" letter-spacing="3" font-weight="700">SYMBOL / VOICE</text>
+<text x="56" y="753" fill="#E9F4F0" font-size="37" font-weight="700">Two crossed orbits. One evidence core.</text>
+<text x="58" y="801" fill="#A6BDB6" font-size="24">Fixed ±38° paths · independent electron highlights · central AXIOM A</text>
+<text x="58" y="861" fill="#41D6A0" font-size="19">Working identity · name and rights pending owner review</text></g>
 </svg>
