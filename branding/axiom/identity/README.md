@@ -22,7 +22,7 @@ The geometric A is constructed from two convergent vectors, a crossbar and a cen
 | [Brand board](brand-board.svg) | Visual reference for maintainers | 1440 × 900 SVG |
 | [Research flow](research-flow.svg) | Conceptual evidence lifecycle | 1440 × 340 SVG |
 
-All files are editable vectors with fixed viewBoxes, self-contained colors and descriptive titles. They contain no remote resources, embedded executable content or third-party marks.
+All vector assets are editable vectors with fixed viewBoxes, self-contained colors and descriptive titles. They contain no remote resources, embedded executable content or third-party marks.
 
 <p>
   <img src="icon-dark.svg" width="96" alt="AXIOM dark emblem">
@@ -37,7 +37,7 @@ All files are editable vectors with fixed viewBoxes, self-contained colors and d
 
 [Playable offline splash source](splash-preview.html) · [Startup animation contract](splash-contract.md)
 
-Download the HTML and open it locally in a browser (GitHub's file view displays source rather than executing it). The ten-second vector animation uses a stationary horizontal orbit, moving evidence highlight, AXIOM wordmark and visible-time preview timeline. It is not integrated with either dashboard or the research engine.
+Download the HTML and open it locally in a browser (GitHub's file view displays source rather than executing it). The ten-second startup presentation uses two stationary crossed electron-style ellipses, each with a moving electron, the AXIOM wordmark, and a presentation-only timeline. The identical startup component is embedded in the localhost dashboard and generated static portal. The dashboard signals readiness after its existing read-only snapshot is rendered; the portal signals readiness after its existing initial view construction. The standalone preview does not run the engine.
 
 ## 2. Color and contrast
 
@@ -69,7 +69,7 @@ Use the light green `#09694E` on paper; do not use bright emerald or evidence mi
 
 The root README starts with a single repository banner, a text title, concise scientific scope and research-status disclaimer. Navigation proceeds to research domains, evidence, reproducibility, repository map and governance. Keep run references explicitly historical unless they refer to the current commit. Avoid external badge trackers and remote images. All branding assets are local to Git; no Pages or CI settings are required to render the README.
 
-The public static portal is generated from its existing template and research records; do not hand-edit generated output. Application/UI adoption of this kit requires a separate scoped change with dark/light and responsive checks.
+The public static portal is generated from its existing template and research records; do not hand-edit generated output. The initial-page startup component is shared verbatim between the preview, dashboard and portal template. Preserve the existing portal data payload, light/dark theme controls, and dashboard refresh/navigation behavior.
 
 ## 5. Scientific and publication voice
 

@@ -1,7 +1,124 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark light"><title>AXIOM / Open Research</title><style>
 :root{--bg:#0b1416;--panel:#122023;--panel2:#192b2c;--line:#29413e;--ink:#e7f4f1;--muted:#a2bdb7;--accent:#63e5b3;--warn:#f0b97f;--bad:#f1a0a0;--shadow:0 12px 36px #0003;color-scheme:dark}body.light{--bg:#eef4f2;--panel:#fff;--panel2:#e2eeea;--line:#bdcec8;--ink:#16352e;--muted:#44675e;--accent:#096c4c;--warn:#89541b;--bad:#9b2b2b;--shadow:0 8px 30px #23403315;color-scheme:light}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}a{color:var(--accent)}button,input,select{font:inherit;color:var(--ink);background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:9px 12px}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:3px}header{position:sticky;top:0;z-index:4;background:var(--panel);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:12px 24px}header svg{width:31px;height:31px;stroke:var(--accent)}.brand{letter-spacing:.14em;font-weight:800;font-size:17px}.tag{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}header .spacer{flex:1}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);min-height:calc(100vh - 65px)}nav{border-right:1px solid var(--line);padding:24px 14px;background:var(--panel)}nav button{display:block;width:100%;text-align:left;margin:6px 0;background:transparent;border-color:transparent;color:var(--muted)}nav button[aria-current=true]{background:var(--panel2);border-color:var(--line);color:var(--accent)}main{padding:28px clamp(16px,3vw,44px);max-width:1420px;width:100%;margin:auto;align-self:start}h1{font-size:clamp(25px,3vw,38px);line-height:1.15;margin:0 0 10px;letter-spacing:-.025em}h2{font-size:17px;margin:0 0 12px}h3{font-size:15px;margin:0 0 8px}.muted,small{color:var(--muted)}.eyebrow{letter-spacing:.14em;color:var(--accent);font-weight:700;font-size:11px;text-transform:uppercase;margin-bottom:12px}.hero{background:linear-gradient(120deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:var(--shadow);margin-bottom:18px}.hero p{max-width:780px;color:var(--muted);margin:0 0 10px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}.metric,.card{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:16px;min-width:0}.metric strong{display:block;font-size:28px;font-variant-numeric:tabular-nums;letter-spacing:-.04em;color:var(--accent);margin:4px 0}.split{display:grid;grid-template-columns:1.35fr 1fr;gap:14px;margin:14px 0}.card p{margin:6px 0 12px}.status{font-size:12px;color:var(--accent);font-weight:600}.open{color:var(--warn)}.counterexample{color:var(--bad)}.barrow{display:grid;grid-template-columns:110px 1fr 65px;align-items:center;gap:8px;margin:12px 0}.bar{height:13px;background:var(--panel2);border-radius:5px;overflow:hidden}.bar i{display:block;height:100%;background:var(--accent);border-radius:5px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.toolbar input{flex:1;min-width:200px}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}table{border-collapse:collapse;width:100%;text-align:left;font-size:13px}th,td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);background:var(--panel2);font-weight:600}tr:last-child td{border-bottom:0}td:first-child{white-space:nowrap;font-family:ui-monospace,monospace}.note{padding:16px 0;border-bottom:1px solid var(--line)}.note:last-child{border:0}.note p{margin:6px 0}.note code,code{font:12px ui-monospace,monospace;overflow-wrap:anywhere;color:var(--muted)}.view[hidden]{display:none}.notice{border-left:2px solid var(--warn);padding:8px 14px;color:var(--muted);margin:16px 0;background:var(--panel)}footer{margin-top:22px;padding:12px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.steps{display:grid;gap:10px}.step{display:flex;gap:12px;align-items:start;padding-bottom:8px;border-bottom:1px solid var(--line)}.step b{color:var(--accent);min-width:24px}.step:last-child{border:0}.big{font-size:25px;font-weight:700;color:var(--accent)}@media(max-width:900px){.layout{grid-template-columns:1fr}nav{display:flex;overflow:auto;border-right:0;border-bottom:1px solid var(--line);padding:6px 12px;gap:5px}nav button{width:auto;white-space:nowrap;margin:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.split{grid-template-columns:1fr}}@media(max-width:480px){header{padding:10px 12px}.tag{display:none}main{padding:16px}.hero{padding:18px}.metric{padding:12px}.metric strong{font-size:23px}.barrow{grid-template-columns:95px 1fr 55px}}
-</style></head><body><header><svg viewBox="0 0 40 40" fill="none" stroke-width="2.8" aria-hidden="true"><path d="M5 34L20 5l15 29M11 24h18"/><circle cx="20" cy="24" r="3" fill="currentColor"/></svg><div><div class="brand">AXIOM</div><div class="tag">Open Research Engine / v0.4.0</div></div><span class="spacer"></span><button id="theme" aria-label="Toggle light or dark theme">Light mode</button></header><div class="layout"><nav aria-label="Research views"><div class="tag">Workspace</div><button data-view="overview" aria-current="true">Overview</button><button data-view="notebook">Research notebook</button><button data-view="experiments">Experiments</button><button data-view="backlog">Work slices</button><button data-view="hosting">Hosting &amp; controls</button></nav><main>
+</style></head><body>
+<!-- AXIOM STARTUP COMPONENT BEGIN -->
+<style>
+#ax-start-dialog{box-sizing:border-box;position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:clamp(8px,2vw,24px);overflow:auto;color:#e9f4f0;background:#0b1213;font:14px/1.5 system-ui,'Segoe UI',Arial,sans-serif;z-index:2147483647}
+#ax-start-dialog:not([open]){display:none}#ax-start-dialog::backdrop{background:#0b1213}
+#ax-start-dialog .ax-start-panel{box-sizing:border-box;width:min(960px,100%);min-height:100%;margin:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+#ax-start-dialog svg{display:block;width:min(100%,960px);height:auto;max-height:72vh;aspect-ratio:16/9;flex:none;background:radial-gradient(ellipse at 50% 38%,#152b27 0%,#0b1213 55%);border-radius:12px}
+#ax-start-dialog p{margin:0;text-align:center;color:#a6bdb6;max-width:65ch}#ax-start-dialog .ax-start-controls{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+#ax-start-dialog button{font:600 14px/1.3 system-ui,'Segoe UI',Arial,sans-serif;color:#e9f4f0;border:1px solid #456d60;background:#142221;border-radius:8px;padding:9px 16px;cursor:pointer}
+#ax-start-dialog button:focus-visible{outline:2px solid #41d6a0;outline-offset:3px}#ax-start-dialog button:disabled{opacity:.6;cursor:default}
+#ax-start-dialog [hidden],#ax-start-notice[hidden]{display:none!important}#ax-start-notice{margin:0;padding:10px 16px;background:#142221;color:#e9f4f0;border-bottom:1px solid #456d60;font:14px/1.5 system-ui,Arial,sans-serif}#ax-start-dialog progress{width:min(320px,85%);height:5px;accent-color:#41d6a0;background:#29413e;border:0;border-radius:3px}#ax-start-dialog progress::-webkit-progress-bar{background:#29413e;border-radius:3px}#ax-start-dialog progress::-webkit-progress-value{background:#41d6a0;border-radius:3px}#ax-start-dialog progress::-moz-progress-bar{background:#41d6a0;border-radius:3px}
+@media(prefers-reduced-motion:reduce){#ax-start-dialog #ax-start-electrons{visibility:hidden}}
+</style>
+<dialog id="ax-start-dialog" aria-label="AXIOM startup" aria-describedby="ax-start-status">
+  <div class="ax-start-panel">
+<svg id="ax-start-scene" viewBox="0 0 1600 900" aria-labelledby="ax-start-title ax-start-desc" role="img">
+      <title id="ax-start-title">AXIOM startup splash preview</title>
+      <desc id="ax-start-desc">A centered AXIOM emblem with two crossed electron-style orbitals and animated emerald highlights.</desc>
+      <defs>
+        <linearGradient id="ax-start-lineGlow" x1="0" x2="1">
+          <stop offset="0%" stop-color="#41D6A0" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#41D6A0" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#41D6A0" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="ax-start-coreGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#B6F7D8" stop-opacity=".98"/>
+          <stop offset="45%" stop-color="#41D6A0" stop-opacity=".52"/>
+          <stop offset="100%" stop-color="#41D6A0" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="ax-start-blur16"><feGaussianBlur stdDeviation="16"/></filter>
+        <filter id="ax-start-blur28"><feGaussianBlur stdDeviation="28"/></filter>
+      </defs>
+
+      <g id="ax-start-bgfx" opacity="0.9">
+        <circle cx="800" cy="350" r="235" fill="#41D6A0" opacity="0.055" filter="url(#ax-start-blur28)"/>
+        <circle cx="800" cy="350" r="125" fill="#B6F7D8" opacity="0.05" filter="url(#ax-start-blur16)"/>
+        
+        <path d="M160 165H1440" stroke="#41D6A0" stroke-opacity="0.08" stroke-width="1.5"/>
+      </g>
+
+      <g id="ax-start-orbitalSystem" transform="translate(800 350)">
+        <ellipse id="ax-start-orbitA_inner" cx="0" cy="0" rx="245" ry="90" fill="none" stroke="#41D6A0" stroke-opacity="0.64" stroke-width="3.2" transform="rotate(38)"/>
+        <ellipse id="ax-start-orbitB_inner" cx="0" cy="0" rx="245" ry="90" fill="none" stroke="#41D6A0" stroke-opacity="0.64" stroke-width="3.2" transform="rotate(-38)"/>
+
+        <circle id="ax-start-coreAura" cx="0" cy="0" r="82" fill="url(#ax-start-coreGlow)" opacity="0.78"/>
+        <circle id="ax-start-core" cx="0" cy="0" r="12" fill="#B6F7D8"/>
+
+        <g id="ax-start-mark" opacity="0.98">
+          <path id="ax-start-aShape" d="M-60 70 L0 -65 L60 70 M-34 19 H34" fill="none" stroke="#41D6A0" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle id="ax-start-aNode" cx="0" cy="19" r="9" fill="#B6F7D8"/>
+          <path d="M-46 92H46" fill="none" stroke="#B6F7D8" stroke-opacity="0.55" stroke-width="2.5"/>
+        </g>
+
+        <g id="ax-start-electrons">
+          <circle id="ax-start-electronA" cx="193.1" cy="150.8" r="9" fill="#B6F7D8" stroke="#41D6A0" stroke-width="3"/>
+          <circle id="ax-start-electronB" cx="-193.1" cy="150.8" r="9" fill="#B6F7D8" stroke="#41D6A0" stroke-width="3"/>
+        </g>
+      </g>
+
+      <g id="ax-start-titles" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+        <text id="ax-start-eyebrow" x="800" y="550" fill="#41D6A0" font-size="24" letter-spacing="7" opacity="1">MATHEMATICAL RESEARCH</text>
+        <text id="ax-start-brand" x="800" y="675" fill="#E9F4F0" font-size="116" font-weight="700" letter-spacing="12" opacity="1">AXIOM</text>
+        <text id="ax-start-subtitle" x="800" y="738" fill="#A6BDB6" font-size="34" letter-spacing="4" opacity="1">RESEARCH ENGINE</text>
+      <text x="800" y="800" fill="#41D6A0" font-size="28">Evidence before conclusions.</text></g>
+    </svg>
+    <p id="ax-start-status" role="status">Opening the interface…</p>
+    <progress id="ax-start-progress" max="10000" value="0" aria-label="Presentation time, not initialization progress"></progress>
+    <p id="ax-start-caption">Startup presentation · not research progress</p>
+    <div class="ax-start-controls"><button id="ax-start-skip" type="button" autofocus>Skip animation</button></div>
+  </div>
+</dialog>
+<p id="ax-start-notice" hidden role="status"></p>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById('ax-start-'+id),dialog=$('dialog'),status=$('status'),progress=$('progress'),skip=$('skip'),motion=matchMedia('(prefers-reduced-motion: reduce)');
+const DURATION=10000,READINESS_TIMEOUT=20000;
+let raf=0,timeout=0,last=null,elapsed=0,active=false,ready=false,skipped=false;
+function point(node,angle,tilt){
+ const a=angle*Math.PI/180,t=tilt*Math.PI/180,x=245*Math.cos(a),y=90*Math.sin(a);
+ node.setAttribute('cx',x*Math.cos(t)-y*Math.sin(t));node.setAttribute('cy',x*Math.sin(t)+y*Math.cos(t));
+}
+function paint(){
+ const t=Math.min(elapsed,DURATION),reduced=motion.matches;
+ if(!reduced){point($('electronA'),t/2600*360,38);point($('electronB'),180-t/3100*360,-38);}
+ $('coreAura').setAttribute('opacity',reduced?'.78':String(.74+.12*Math.sin(t/650)));
+ progress.value=skipped||reduced?DURATION:t;
+}
+function clear(){cancelAnimationFrame(raf);raf=0;clearTimeout(timeout);timeout=0;last=null;active=false;}
+function close(outcome){if(!active)return;clear();dialog.close();if(outcome==='timeout'||outcome==='error'){$('notice').textContent=outcome==='timeout'?'Startup presentation ended while interface loading was still pending. The application has not reported readiness.':'Startup presentation ended after an interface error.';$('notice').hidden=false;}dialog.dispatchEvent(new CustomEvent('axiom-startup-end',{detail:outcome}));}
+function maybeFinish(){
+ if(!active)return;
+ const presentationDone=skipped||motion.matches||elapsed>=DURATION;
+ if(ready&&presentationDone){close('ready');return;}
+ if(presentationDone){if(status.textContent!=='Waiting for the interface to finish loading…')status.textContent='Waiting for the interface to finish loading…';skip.disabled=true;}
+ else{skip.disabled=false;if(ready&&status.textContent!=='Interface loaded · completing startup presentation')status.textContent='Interface loaded · completing startup presentation';}
+}
+function tick(now){raf=0;if(!active||document.hidden){last=null;return;}if(last!==null)elapsed=Math.min(DURATION,elapsed+Math.max(0,now-last));last=now;paint();maybeFinish();schedule();}
+function schedule(){if(active&&!document.hidden&&!raf&&!skipped&&!motion.matches&&elapsed<DURATION)raf=requestAnimationFrame(tick);}
+function dismissPresentation(){if(!active)return;skipped=true;cancelAnimationFrame(raf);raf=0;last=null;paint();maybeFinish();}
+function signalReady(ok){$('notice').hidden=true;if(!active)return;if(!ok){close('unavailable');return;}ready=true;clearTimeout(timeout);timeout=0;maybeFinish();}
+function start(){
+ if(active)return;$('notice').hidden=true;ready=false;skipped=false;elapsed=0;last=null;skip.disabled=false;status.textContent='Opening the interface…';
+ try{if(typeof dialog.showModal!=='function')return;dialog.showModal();}catch(_){return;}
+ active=true;paint();timeout=setTimeout(()=>close('timeout'),READINESS_TIMEOUT);maybeFinish();schedule();
+}
+window.AxiomStartup=Object.freeze({ready:()=>signalReady(true),unavailable:()=>signalReady(false),start});
+skip.addEventListener('click',dismissPresentation);dialog.addEventListener('cancel',event=>{event.preventDefault();dismissPresentation();});
+document.addEventListener('visibilitychange',()=>{last=null;if(document.hidden){cancelAnimationFrame(raf);raf=0;}else schedule();});
+motion.addEventListener('change',()=>{if(!active)return;cancelAnimationFrame(raf);raf=0;last=null;paint();maybeFinish();schedule();});
+// Fail open on unexpected UI errors; never hide an existing application error behind branding.
+window.addEventListener('error',()=>{if(active)close('error');});
+window.addEventListener('unhandledrejection',()=>{if(active)close('error');});
+start();
+})();
+</script>
+<!-- AXIOM STARTUP COMPONENT END -->
+<header><svg viewBox="0 0 40 40" fill="none" stroke-width="2.8" aria-hidden="true"><path d="M5 34L20 5l15 29M11 24h18"/><circle cx="20" cy="24" r="3" fill="currentColor"/></svg><div><div class="brand">AXIOM</div><div class="tag">Open Research Engine / v0.4.0</div></div><span class="spacer"></span><button id="theme" aria-label="Toggle light or dark theme">Light mode</button></header><div class="layout"><nav aria-label="Research views"><div class="tag">Workspace</div><button data-view="overview" aria-current="true">Overview</button><button data-view="notebook">Research notebook</button><button data-view="experiments">Experiments</button><button data-view="backlog">Work slices</button><button data-view="hosting">Hosting &amp; controls</button></nav><main>
 <section class="view" id="overview"><div class="hero"><div class="eyebrow">Computational complexity / open research</div><h1>Evidence before conclusions.</h1><p>Exact SAT counting, structured permanents and shared arithmetic. A finite, reproducible research workspace designed for standard public GitHub runners, with no backend server or paid AI integration.</p><span class="status">PUBLICATION CANDIDATE · SEE ACTIONS FOR CURRENT CI</span></div><div class="grid"><div class="metric"><small>Exact replay checks</small><strong id="checks">—</strong><small>Recorded local run</small></div><div class="metric"><small>Engineering slices</small><strong id="eng">—</strong><small>All open for review</small></div><div class="metric"><small>Scientific slices</small><strong id="sci">—</strong><small>R10–R29</small></div><div class="metric"><small>Additional cost target</small><strong>$0</strong><small>Within free allowances</small></div></div><div class="split"><div class="card"><h2>Matched strategy experiment</h2><p class="muted">Recursive requests, lower is better. Training winner frozen before holdout.</p><div id="bars"></div><small>Not a runtime measurement or proof of improved worst-case complexity.</small></div><div class="card"><h2>Next scientific priorities</h2><div class="steps"><div class="step"><b>01</b><span>Weighted quotient graphs and exact aggregation</span></div><div class="step"><b>02</b><span>Valuation-aware modular arithmetic</span></div><div class="step"><b>03</b><span>Entire truncated coefficient families</span></div><div class="step"><b>04</b><span>Asymmetric SAT-derived matrices and formal specifications</span></div></div></div></div><div class="notice">No autonomous model calls, arbitrary candidate code, scheduled discovery or production proof claim. Publication and account settings require maintainer review.</div></section>
 <section class="view" id="notebook" hidden><div class="eyebrow">Evidence register</div><h1>Research notebook</h1><p class="muted">Git-backed entries; content hashes bind evidence, not publisher identity. Human publication review remains required.</p><div class="toolbar"><input id="note-search" placeholder="Search statement, ID or status" aria-label="Search notebook"><select id="note-status" aria-label="Filter notebook status"><option value="all">All statuses</option><option value="finite_pass">Finite pass</option><option value="counterexample">Counterexample</option><option value="open">Open</option></select></div><div class="card" id="notes"></div></section>
 <section class="view" id="experiments" hidden><div class="eyebrow">Finite verification / local evidence</div><h1>Experiments</h1><p class="muted">Recorded v0.4 replay; comparison of identical fixtures and attempt budgets.</p><div class="split" id="result-cards"></div><div class="card"><h2>Attempt history</h2><div class="tablewrap"><table><thead><tr><th>Attempt</th><th>Adaptive requests</th><th>Blind requests</th></tr></thead><tbody id="attempts"></tbody></table></div></div><p><a id="actions-link" hidden>Open GitHub Actions</a><span id="actions-help">After publishing, open the repository → Actions → Bounded research regression → Run workflow.</span></p></section>
@@ -19,4 +136,5 @@ for(let i=0;i<D.history.adaptive.length;i++){const tr=el('tr');tr.append(el('td'
 function filtered(){return D.backlog.filter(x=>match(x,$('work-search').value)&&($('work-scope').value==='all'||x.id.startsWith($('work-scope').value)))}function work(){const rows=filtered();$('work').replaceChildren();$('work-count').textContent=rows.length+' of '+D.backlog.length+' slices';for(const x of rows){const tr=el('tr'),desc=el('td');desc.append(el('b',x.title),el('div',x.acceptance,'muted'));tr.append(el('td',x.id),desc,el('td',x.dependencies));$('work').append(tr)}}for(const id of ['work-search','work-scope'])$(id).addEventListener('input',work);work();$('export').addEventListener('click',()=>{const esc=x=>'"'+String(x).replace(/"/g,'""')+'"';const lines=[['id','title','dependencies','acceptance'],...filtered().map(x=>[x.id,x.title,x.dependencies,x.acceptance])];const url=URL.createObjectURL(new Blob([lines.map(r=>r.map(esc).join(',')).join('\r\n')],{type:'text/csv'}));const a=el('a');a.href=url;a.download='axiom-work-slices.csv';a.click();URL.revokeObjectURL(url)});
 for(const [n,v] of [['Runner labels',D.profile.runner_labels.join(', ')],['Matrix parallelism',D.profile.max_parallel_per_matrix],['Job timeout',D.profile.job_timeout_minutes+' min'],['Routine artifact uploads','Off'],['Paid AI calls','Off'],['Self-hosted runners','None'],['Scheduled campaigns','Off']]){const r=el('div',undefined,'note');r.append(el('small',n),el('div',v));$('policy').append(r)}
 if(location.protocol==='https:'&&/^[a-z0-9-]+\.github\.io$/i.test(location.hostname)){const owner=location.hostname.split('.')[0],repo=location.pathname.split('/').filter(Boolean)[0]||location.hostname;if(/^[a-z0-9_.-]+$/i.test(repo)){const a=$('actions-link');a.href='https://github.com/'+owner+'/'+repo+'/actions';a.hidden=false;$('actions-help').hidden=true}}
+window.AxiomStartup?.ready();
 </script></body></html>

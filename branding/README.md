@@ -18,6 +18,6 @@ The new vector kit is an evolution of the existing public concept. The original 
 | INVARIANT | Symmetry / navy and cyan | [Guide](invariant/BRAND_GUIDE.md) · [Banner](invariant/banner.svg) · [Icon](invariant/icon.svg) |
 | ProofFoundry | Proof lattice / carbon and copper | [Guide](prooffoundry/BRAND_GUIDE.md) · [Banner](prooffoundry/banner.svg) · [Icon](prooffoundry/icon.svg) |
 
-Use AXIOM in the repository presentation; do not mix concept families in one surface. Existing theme tokens remain the color authority. The static portal continues to use its existing neutral graphite and emerald styling; application integration is outside this branding-only change.
+Use AXIOM in the repository presentation; do not mix concept families in one surface. Existing theme tokens remain the color authority. The static portal retains its existing neutral graphite and emerald styling; the crossed-orbit startup presentation is integrated into its initial page load and the localhost dashboard. No research execution behavior is changed.
 
 All names and public-use rights remain subject to owner approval. Historical visual boards remain in the separate review-only archive; no private assets were imported.

@@ -1,9 +1,126 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Axiom | Research control</title><style>
 :root{color-scheme:dark;--bg:#0b1216;--panel:#131e24;--edge:#26383f;--text:#e9f2f0;--muted:#9eafb5;--mint:#75e0b5;--amber:#e5b970;--bad:#ff9a91}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px system-ui,Segoe UI,sans-serif}header{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:#101b20;border-bottom:1px solid var(--edge)}.logo{font-size:20px;font-weight:800;letter-spacing:.12em;color:var(--mint)}.sub{color:var(--muted);font-size:12px}button,a{color:inherit}button{font:inherit;background:#1a2a31;border:1px solid var(--edge);padding:9px 13px;border-radius:7px;cursor:pointer}button:hover,button:focus-visible{border-color:var(--mint)}button[aria-current=true]{background:#1d3c35;color:var(--mint);border-color:#345a51}.shell{display:grid;grid-template-columns:210px minmax(0,1fr);min-height:calc(100vh - 65px)}nav{padding:20px 14px;border-right:1px solid var(--edge);background:#10191d}nav button{display:block;text-align:left;width:100%;background:transparent;border:1px solid transparent;margin:4px 0}nav small{display:block;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin:20px 8px 8px}main{padding:25px 30px 45px;max-width:1450px;width:100%;margin:auto}h1{font-size:29px;margin:0 0 5px}h2{font-size:17px;margin:0 0 15px}h3{font-size:14px;margin:0 0 8px}p{line-height:1.6;margin:8px 0 14px}.muted{color:var(--muted)}.tag{font-size:11px;letter-spacing:.06em;font-weight:700;text-transform:uppercase;color:var(--mint);padding:5px 8px;border:1px solid #345a51;border-radius:4px;display:inline-block}.warn{color:var(--amber)}.bad{color:var(--bad)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}.card{background:var(--panel);border:1px solid var(--edge);border-radius:10px;padding:18px;min-width:0}.value{font-size:29px;font-weight:700;display:block;margin:8px 0;color:var(--mint)}.twocol{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px;margin:14px 0}.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0}.step{padding:10px;border:1px solid #345a51;border-radius:6px;background:#172b2a;font-size:12px}.arrow{color:var(--mint)}table{border-collapse:collapse;width:100%;font-size:13px}td,th{text-align:left;padding:12px 9px;border-bottom:1px solid var(--edge);vertical-align:top}th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}pre{background:#0b1418;border:1px solid var(--edge);border-radius:6px;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;font-size:12px}code{overflow-wrap:anywhere;color:#a6e8cf}.tablewrap{overflow:auto}label{display:block;font-size:12px;color:var(--muted);margin:8px 0}select{background:var(--panel);color:var(--text);padding:8px;border:1px solid var(--edge);border-radius:6px;max-width:100%}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.notice{border-left:3px solid var(--amber);padding:8px 12px;background:#2a231b;margin:12px 0;color:#f1d7ac}.bar{background:#25383e;height:8px;border-radius:6px;overflow:hidden}.fill{height:8px;background:var(--mint)}footer{margin-top:24px;color:var(--muted);font-size:12px}.hidden{display:none}.nowrap{white-space:nowrap}@media(max-width:900px){.shell{grid-template-columns:1fr}nav{display:flex;overflow:auto;border-right:0;border-bottom:1px solid var(--edge);padding:7px}nav small{display:none}nav button{width:auto;white-space:nowrap}main{padding:18px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.twocol{grid-template-columns:1fr}}@media(max-width:500px){header{padding:12px}.logo{font-size:16px}.grid{gap:8px}.card{padding:12px}.value{font-size:23px}main{padding:12px}}
-</style></head><body><header><div><span class="logo">AXIOM</span><div class="sub">MATHEMATICAL RESEARCH ENGINE / v0.3</div></div><div class="row"><span class="tag" id="mode">OFFLINE FIXTURE</span><button id="refresh">Refresh evidence</button></div></header><div class="shell"><nav aria-label="Research views"><small>Workspace</small><button data-view="overview" aria-current="true">◉ Overview</button><button data-view="campaigns">▤ Campaigns</button><button data-view="attempts">⊞ Experiments</button><button data-view="notebook">▧ Verified notebook</button><button data-view="verification">✓ Verification</button><small>Engineering</small><button data-view="roadmap">≡ Work slices</button><button data-view="settings">⚙ Controls / setup</button></nav><main id="main" tabindex="-1"></main></div><script>
+</style></head><body>
+<!-- AXIOM STARTUP COMPONENT BEGIN -->
+<style>
+#ax-start-dialog{box-sizing:border-box;position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:clamp(8px,2vw,24px);overflow:auto;color:#e9f4f0;background:#0b1213;font:14px/1.5 system-ui,'Segoe UI',Arial,sans-serif;z-index:2147483647}
+#ax-start-dialog:not([open]){display:none}#ax-start-dialog::backdrop{background:#0b1213}
+#ax-start-dialog .ax-start-panel{box-sizing:border-box;width:min(960px,100%);min-height:100%;margin:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+#ax-start-dialog svg{display:block;width:min(100%,960px);height:auto;max-height:72vh;aspect-ratio:16/9;flex:none;background:radial-gradient(ellipse at 50% 38%,#152b27 0%,#0b1213 55%);border-radius:12px}
+#ax-start-dialog p{margin:0;text-align:center;color:#a6bdb6;max-width:65ch}#ax-start-dialog .ax-start-controls{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+#ax-start-dialog button{font:600 14px/1.3 system-ui,'Segoe UI',Arial,sans-serif;color:#e9f4f0;border:1px solid #456d60;background:#142221;border-radius:8px;padding:9px 16px;cursor:pointer}
+#ax-start-dialog button:focus-visible{outline:2px solid #41d6a0;outline-offset:3px}#ax-start-dialog button:disabled{opacity:.6;cursor:default}
+#ax-start-dialog [hidden],#ax-start-notice[hidden]{display:none!important}#ax-start-notice{margin:0;padding:10px 16px;background:#142221;color:#e9f4f0;border-bottom:1px solid #456d60;font:14px/1.5 system-ui,Arial,sans-serif}#ax-start-dialog progress{width:min(320px,85%);height:5px;accent-color:#41d6a0;background:#29413e;border:0;border-radius:3px}#ax-start-dialog progress::-webkit-progress-bar{background:#29413e;border-radius:3px}#ax-start-dialog progress::-webkit-progress-value{background:#41d6a0;border-radius:3px}#ax-start-dialog progress::-moz-progress-bar{background:#41d6a0;border-radius:3px}
+@media(prefers-reduced-motion:reduce){#ax-start-dialog #ax-start-electrons{visibility:hidden}}
+</style>
+<dialog id="ax-start-dialog" aria-label="AXIOM startup" aria-describedby="ax-start-status">
+  <div class="ax-start-panel">
+<svg id="ax-start-scene" viewBox="0 0 1600 900" aria-labelledby="ax-start-title ax-start-desc" role="img">
+      <title id="ax-start-title">AXIOM startup splash preview</title>
+      <desc id="ax-start-desc">A centered AXIOM emblem with two crossed electron-style orbitals and animated emerald highlights.</desc>
+      <defs>
+        <linearGradient id="ax-start-lineGlow" x1="0" x2="1">
+          <stop offset="0%" stop-color="#41D6A0" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#41D6A0" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#41D6A0" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="ax-start-coreGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#B6F7D8" stop-opacity=".98"/>
+          <stop offset="45%" stop-color="#41D6A0" stop-opacity=".52"/>
+          <stop offset="100%" stop-color="#41D6A0" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="ax-start-blur16"><feGaussianBlur stdDeviation="16"/></filter>
+        <filter id="ax-start-blur28"><feGaussianBlur stdDeviation="28"/></filter>
+      </defs>
+
+      <g id="ax-start-bgfx" opacity="0.9">
+        <circle cx="800" cy="350" r="235" fill="#41D6A0" opacity="0.055" filter="url(#ax-start-blur28)"/>
+        <circle cx="800" cy="350" r="125" fill="#B6F7D8" opacity="0.05" filter="url(#ax-start-blur16)"/>
+        
+        <path d="M160 165H1440" stroke="#41D6A0" stroke-opacity="0.08" stroke-width="1.5"/>
+      </g>
+
+      <g id="ax-start-orbitalSystem" transform="translate(800 350)">
+        <ellipse id="ax-start-orbitA_inner" cx="0" cy="0" rx="245" ry="90" fill="none" stroke="#41D6A0" stroke-opacity="0.64" stroke-width="3.2" transform="rotate(38)"/>
+        <ellipse id="ax-start-orbitB_inner" cx="0" cy="0" rx="245" ry="90" fill="none" stroke="#41D6A0" stroke-opacity="0.64" stroke-width="3.2" transform="rotate(-38)"/>
+
+        <circle id="ax-start-coreAura" cx="0" cy="0" r="82" fill="url(#ax-start-coreGlow)" opacity="0.78"/>
+        <circle id="ax-start-core" cx="0" cy="0" r="12" fill="#B6F7D8"/>
+
+        <g id="ax-start-mark" opacity="0.98">
+          <path id="ax-start-aShape" d="M-60 70 L0 -65 L60 70 M-34 19 H34" fill="none" stroke="#41D6A0" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle id="ax-start-aNode" cx="0" cy="19" r="9" fill="#B6F7D8"/>
+          <path d="M-46 92H46" fill="none" stroke="#B6F7D8" stroke-opacity="0.55" stroke-width="2.5"/>
+        </g>
+
+        <g id="ax-start-electrons">
+          <circle id="ax-start-electronA" cx="193.1" cy="150.8" r="9" fill="#B6F7D8" stroke="#41D6A0" stroke-width="3"/>
+          <circle id="ax-start-electronB" cx="-193.1" cy="150.8" r="9" fill="#B6F7D8" stroke="#41D6A0" stroke-width="3"/>
+        </g>
+      </g>
+
+      <g id="ax-start-titles" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+        <text id="ax-start-eyebrow" x="800" y="550" fill="#41D6A0" font-size="24" letter-spacing="7" opacity="1">MATHEMATICAL RESEARCH</text>
+        <text id="ax-start-brand" x="800" y="675" fill="#E9F4F0" font-size="116" font-weight="700" letter-spacing="12" opacity="1">AXIOM</text>
+        <text id="ax-start-subtitle" x="800" y="738" fill="#A6BDB6" font-size="34" letter-spacing="4" opacity="1">RESEARCH ENGINE</text>
+      <text x="800" y="800" fill="#41D6A0" font-size="28">Evidence before conclusions.</text></g>
+    </svg>
+    <p id="ax-start-status" role="status">Opening the interface…</p>
+    <progress id="ax-start-progress" max="10000" value="0" aria-label="Presentation time, not initialization progress"></progress>
+    <p id="ax-start-caption">Startup presentation · not research progress</p>
+    <div class="ax-start-controls"><button id="ax-start-skip" type="button" autofocus>Skip animation</button></div>
+  </div>
+</dialog>
+<p id="ax-start-notice" hidden role="status"></p>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById('ax-start-'+id),dialog=$('dialog'),status=$('status'),progress=$('progress'),skip=$('skip'),motion=matchMedia('(prefers-reduced-motion: reduce)');
+const DURATION=10000,READINESS_TIMEOUT=20000;
+let raf=0,timeout=0,last=null,elapsed=0,active=false,ready=false,skipped=false;
+function point(node,angle,tilt){
+ const a=angle*Math.PI/180,t=tilt*Math.PI/180,x=245*Math.cos(a),y=90*Math.sin(a);
+ node.setAttribute('cx',x*Math.cos(t)-y*Math.sin(t));node.setAttribute('cy',x*Math.sin(t)+y*Math.cos(t));
+}
+function paint(){
+ const t=Math.min(elapsed,DURATION),reduced=motion.matches;
+ if(!reduced){point($('electronA'),t/2600*360,38);point($('electronB'),180-t/3100*360,-38);}
+ $('coreAura').setAttribute('opacity',reduced?'.78':String(.74+.12*Math.sin(t/650)));
+ progress.value=skipped||reduced?DURATION:t;
+}
+function clear(){cancelAnimationFrame(raf);raf=0;clearTimeout(timeout);timeout=0;last=null;active=false;}
+function close(outcome){if(!active)return;clear();dialog.close();if(outcome==='timeout'||outcome==='error'){$('notice').textContent=outcome==='timeout'?'Startup presentation ended while interface loading was still pending. The application has not reported readiness.':'Startup presentation ended after an interface error.';$('notice').hidden=false;}dialog.dispatchEvent(new CustomEvent('axiom-startup-end',{detail:outcome}));}
+function maybeFinish(){
+ if(!active)return;
+ const presentationDone=skipped||motion.matches||elapsed>=DURATION;
+ if(ready&&presentationDone){close('ready');return;}
+ if(presentationDone){if(status.textContent!=='Waiting for the interface to finish loading…')status.textContent='Waiting for the interface to finish loading…';skip.disabled=true;}
+ else{skip.disabled=false;if(ready&&status.textContent!=='Interface loaded · completing startup presentation')status.textContent='Interface loaded · completing startup presentation';}
+}
+function tick(now){raf=0;if(!active||document.hidden){last=null;return;}if(last!==null)elapsed=Math.min(DURATION,elapsed+Math.max(0,now-last));last=now;paint();maybeFinish();schedule();}
+function schedule(){if(active&&!document.hidden&&!raf&&!skipped&&!motion.matches&&elapsed<DURATION)raf=requestAnimationFrame(tick);}
+function dismissPresentation(){if(!active)return;skipped=true;cancelAnimationFrame(raf);raf=0;last=null;paint();maybeFinish();}
+function signalReady(ok){$('notice').hidden=true;if(!active)return;if(!ok){close('unavailable');return;}ready=true;clearTimeout(timeout);timeout=0;maybeFinish();}
+function start(){
+ if(active)return;$('notice').hidden=true;ready=false;skipped=false;elapsed=0;last=null;skip.disabled=false;status.textContent='Opening the interface…';
+ try{if(typeof dialog.showModal!=='function')return;dialog.showModal();}catch(_){return;}
+ active=true;paint();timeout=setTimeout(()=>close('timeout'),READINESS_TIMEOUT);maybeFinish();schedule();
+}
+window.AxiomStartup=Object.freeze({ready:()=>signalReady(true),unavailable:()=>signalReady(false),start});
+skip.addEventListener('click',dismissPresentation);dialog.addEventListener('cancel',event=>{event.preventDefault();dismissPresentation();});
+document.addEventListener('visibilitychange',()=>{last=null;if(document.hidden){cancelAnimationFrame(raf);raf=0;}else schedule();});
+motion.addEventListener('change',()=>{if(!active)return;cancelAnimationFrame(raf);raf=0;last=null;paint();maybeFinish();schedule();});
+// Fail open on unexpected UI errors; never hide an existing application error behind branding.
+window.addEventListener('error',()=>{if(active)close('error');});
+window.addEventListener('unhandledrejection',()=>{if(active)close('error');});
+start();
+})();
+</script>
+<!-- AXIOM STARTUP COMPONENT END -->
+<header><div><span class="logo">AXIOM</span><div class="sub">MATHEMATICAL RESEARCH ENGINE / v0.3</div></div><div class="row"><span class="tag" id="mode">OFFLINE FIXTURE</span><button id="refresh">Refresh evidence</button></div></header><div class="shell"><nav aria-label="Research views"><small>Workspace</small><button data-view="overview" aria-current="true">◉ Overview</button><button data-view="campaigns">▤ Campaigns</button><button data-view="attempts">⊞ Experiments</button><button data-view="notebook">▧ Verified notebook</button><button data-view="verification">✓ Verification</button><small>Engineering</small><button data-view="roadmap">≡ Work slices</button><button data-view="settings">⚙ Controls / setup</button></nav><main id="main" tabindex="-1"></main></div><script>
 const embedded=null; // replaced by export builder for standalone preview
 let snapshot=embedded||{attempts:[],memory:[],events:[],ledger_valid:null,mode:'offline_fixture'};let view='overview', selected='';const main=document.getElementById('main');
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const fmt=x=>new Intl.NumberFormat().format(x);const card=(label,value,desc)=>`<div class="card"><div class="muted">${label}</div><span class="value">${esc(value)}</span><div class="sub">${desc}</div></div>`;const status=r=>`<span class="${r==='counterexample'?'bad':r==='finite_pass'?'tag':'warn'}">${esc(r.replaceAll('_',' '))}</span>`;const intro=(h,d)=>`<h1>${h}</h1><p class="muted">${d}</p>`;const table=as=>`<div class="tablewrap"><table><thead><tr><th>Strategy</th><th>Verdict</th><th>Checks</th><th>Time</th></tr></thead><tbody>${as.map(a=>`<tr><td><button data-attempt="${esc(a.attempt_id)}">${esc(a.strategy)}</button></td><td>${status(a.result.verdict)}</td><td>${a.result.passed}/${a.result.total}</td><td>${(a.elapsed_ns/1e6).toFixed(1)} ms</td></tr>`).join('')||'<tr><td colspan="4">No attempts yet. Run the CLI demo.</td></tr>'}</tbody></table></div>`;
 const phases=[['S001–S008','Evidence foundation','Starter partial: ledger and fixture verifier'],['S009–S016','Isolation and orchestration','Planned'],['S017–S024','Agent and memory loop','Planned'],['S025–S032','SAT/permanent research','Planned'],['S033–S040','Formal verification','Planned'],['S041–S048','UI, controls and release','Prototype UI available; remainder planned']];
 function render(){let a=snapshot.attempts||[],m=snapshot.memory||[],e=snapshot.events||[],passed=a.filter(x=>x.result.verdict==='finite_pass').length,failed=a.filter(x=>x.result.verdict==='counterexample').length;let html='';if(view==='overview'){html=intro('Research overview','Local evidence dashboard • recorded fixture results, not a P versus NP proof.')+`<div class="notice">Automation OFF. No model calls, generated-code execution, or background scheduler in this prototype.</div><div class="grid">${card('Verified attempts',a.length,'Finite test runs')}${card('Fixture passes',passed,'Not theorem proofs')}${card('Counterexamples',failed,'Rejected candidates')}${card('Approved lessons',m.length,'Explicit CLI approval')}</div><div class="card"><h2>Research loop · target architecture</h2><div class="flow">${['Retrieve evidence','Propose','Critique','Execute','Verify','Review','Archive'].map((s,i)=>`<span class="step">${s}</span>${i<6?'<span class="arrow">→</span>':''}`).join('')}</div><p class="sub">Implemented now: trusted fixture execution, independent oracles, ledger, explicit approval. Bounded foreground campaign runner is implemented. Agent generation and hardened worker isolation are planned.</p></div><div class="twocol"><div class="card"><h2>Recent experiments</h2>${table(a.slice(-5))}</div><div class="card"><h2>Research targets</h2><h3>01 · Structured permanent</h3><p class="muted">Compress coefficient families and physical interiors; preserve H1 + T2.</p><h3>02 · End-to-end SAT</h3><p class="muted">Compare against exact assignment counts on signed and asymmetric inputs.</p><h3>03 · Complexity</h3><p class="muted">Separate finite evidence from general bounds.</p></div></div><div class="card"><h2>Evidence integrity</h2><p>Hash chain: ${snapshot.ledger_valid===null?'not loaded':snapshot.ledger_valid?'PASS':'FAIL'}. ${e.length} events. Local hash-chain checks do not establish authenticity against privileged rewriting.</p></div>`;}else if(view==='campaigns'){const cs=e.filter(x=>x.kind==='campaign.started');html=intro('Campaigns','Explicitly bounded runs; every campaign records its seed and attempt limit.')+`<div class="card"><h2>Campaign ledger</h2>${cs.map(x=>`<h3>${esc(x.payload.campaign_id.slice(0,8))} · ${esc(x.ts)}</h3><p class="muted">Seeds ${esc((x.payload.seeds||[x.payload.seed]).join(', '))} · maximum ${x.payload.max_attempts} attempts · ${e.some(y=>y.kind==='campaign.completed'&&y.payload.campaign_id===x.payload.campaign_id)?'Completed':e.some(y=>y.kind==='campaign.stopped'&&y.payload.campaign_id===x.payload.campaign_id)?'Stopped':'Incomplete'}</p>`).join('')||'<p>No campaigns recorded.</p>'}<pre>python -m axiom demo --max-attempts 3</pre></div>`;}else if(view==='attempts'){let x=a.find(y=>y.attempt_id===selected)||a[0];html=intro('Experiments','Select a candidate to inspect its observed evidence.')+`<div class="card">${table(a)}</div>`+(x?`<div class="twocol"><div class="card"><h2>${esc(x.strategy)}</h2><p>${esc(x.result.description)}</p>${status(x.result.verdict)}<p>Passed ${x.result.passed} of ${x.result.total} fixtures.</p><p class="muted">Candidate units: ${fmt(x.result.candidate_units)} · oracle units: ${fmt(x.result.oracle_units)}. Different measures; no speed ratio inferred.</p><h3>Counterexample / result</h3><pre>${esc(JSON.stringify(x.result.counterexample||{verdict:x.result.verdict},null,2))}</pre></div><div class="card"><h2>Provenance</h2><p>Attempt</p><code>${esc(x.attempt_id)}</code><p>Evidence hash</p><code>${esc(x.evidence_hash)}</code><p>Source SHA-256</p><code>${esc(x.code_sha256)}</code><p>Promote a finite lesson manually:</p><pre>python -m axiom approve ${esc(x.attempt_id)}</pre></div></div>`:'');}else if(view==='notebook'){html=intro('Verified notebook','Only explicitly approved, evidence-linked lessons enter the notebook.')+`<div class="card">${m.map(x=>`<h3>${esc(x.lesson)}</h3>${status(x.grade)}<p class="muted">Evidence event: ${esc(x.evidence_event)}</p><pre>${esc(x.source_hash)}</pre>`).join('')||'<p>No approved lessons yet.</p>'}</div>`;}else if(view==='verification'){html=intro('Verification','Separate finite checks, counterexamples, mathematical derivations and formal proofs.')+`<div class="grid">${card('Finite passes',passed,'Exhaustive oracle on small fixtures')}${card('Rejected',failed,'Concrete mismatch')}${card('Formal proofs',0,'Not implemented')}${card('General bounds',0,'Not established')}</div><div class="card"><h2>Exact arithmetic checks</h2>${table(a)}<p class="muted">Fixture generator uses a reproducible seed. Hidden production holdouts and Lean integration are future work.</p></div>`;}else if(view==='roadmap'){html=intro('Engineering work slices','48 proposed slices; no implied completed production features.')+`<div class="card"><table><thead><tr><th>Slice group</th><th>Scope</th><th>Status</th></tr></thead><tbody>${phases.map(x=>`<tr>${x.map(v=>`<td>${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}else{html=intro('Controls and setup','Local-only starter. No start, scheduling, provider or publishing control is exposed in the browser.')+`<div class="twocol"><div class="card"><h2>Run commands</h2><pre>python -m unittest discover -s tests -v\npython -m axiom demo\npython -m axiom audit\npython -m axiom serve</pre><p>Stop the foreground server with Ctrl+C.</p></div><div class="card"><h2>Safety posture</h2><p>Provider: disabled<br>Scheduling: disabled<br>Generated code: disabled<br>Network: localhost dashboard only<br>Notebook writes: CLI review only</p><div class="notice">Production isolation, role-based access, budget leases and emergency worker termination are specified, not implemented.</div></div></div>`;}main.innerHTML=html+'<footer>AXIOM / Evidence before claims · Read-only browser · ' +(embedded?'Standalone snapshot':'Local API')+'</footer>';main.querySelectorAll('[data-attempt]').forEach(b=>b.onclick=()=>{selected=b.dataset.attempt;switchView('attempts')});}
-function switchView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-current',String(b.dataset.view===v)));render();main.focus({preventScroll:true})}document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));async function load(){if(embedded){render();return}try{let r=await fetch('/api/v1/snapshot',{cache:'no-store'});if(!r.ok)throw Error(r.status);snapshot=await r.json();render()}catch(e){render();main.insertAdjacentHTML('afterbegin','<div class="notice">Local API unavailable. Start the CLI server or open the standalone preview.</div>')}}document.getElementById('refresh').onclick=load;load();</script></body></html>
+function switchView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-current',String(b.dataset.view===v)));render();main.focus({preventScroll:true})}document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));async function load(){if(embedded){render();return true}try{let r=await fetch('/api/v1/snapshot',{cache:'no-store'});if(!r.ok)throw Error(r.status);snapshot=await r.json();render();return true}catch(e){render();main.insertAdjacentHTML('afterbegin','<div class="notice">Local API unavailable. Start the CLI server or open the standalone preview.</div>');return false}}document.getElementById('refresh').onclick=load;load().then(ok=>{if(ok)window.AxiomStartup?.ready();else window.AxiomStartup?.unavailable();},error=>{window.AxiomStartup?.unavailable();throw error;});</script></body></html>
