@@ -33,6 +33,12 @@ All files are editable vectors with fixed viewBoxes, self-contained colors and d
 
 ![Light wordmark](wordmark-light.svg)
 
+## Startup experience / preview
+
+[Playable offline splash source](splash-preview.html) · [Startup animation contract](splash-contract.md)
+
+Download the HTML and open it locally in a browser (GitHub's file view displays source rather than executing it). The ten-second vector animation uses a stationary horizontal orbit, moving evidence highlight, AXIOM wordmark and visible-time preview timeline. It is not integrated with either dashboard or the research engine.
+
 ## 2. Color and contrast
 
 The original [JSON tokens](../tokens.json) and [CSS tokens](../tokens.css) are authoritative. The mint evidence node is a decorative brand accent, not a semantic status.
