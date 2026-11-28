@@ -1,5 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="208" viewBox="0 0 840 208" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
-  <title id="title">AXIOM dark wordmark</title>
-  <desc id="desc">AXIOM Research Engine, geometric A and central evidence node.</desc>
-<rect width="840" height="208" rx="12" fill="#0B1213"/><g transform="translate(38 30) scale(1)"><path d="M25 116 72 24 119 116 M47 83H97" fill="none" stroke="#41D6A0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="72" cy="83" r="8" fill="#B6F7D8"/><path d="M36 128H108" stroke="#B6F7D8" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/></g><g font-family="Arial, Helvetica, sans-serif"><text x="220" y="105" fill="#E9F4F0" font-size="75" font-weight="700" letter-spacing="5">AXIOM</text><text x="225" y="153" fill="#41D6A0" font-size="25" letter-spacing="2.5">RESEARCH ENGINE</text></g>
+  <title id="title">AXIOM dark orbital wordmark</title>
+  <desc id="desc">Two crossed electron-style ellipses at plus and minus 38 degrees surround the geometric AXIOM A and its evidence node. Conceptual artwork, not a physical electron model.</desc>
+<rect width="840" height="208" rx="12" fill="#0B1213"/>
+<g transform="translate(115 102) scale(0.4)">
+
+<g fill="none" stroke="#41D6A0" stroke-width="12" stroke-opacity="1"><ellipse rx="245" ry="90" transform="rotate(38)"/><ellipse rx="245" ry="90" transform="rotate(-38)"/></g>
+
+<circle r="13" fill="#B6F7D8"/>
+<path d="M-60 70 L0 -65 L60 70 M-34 19 H34" fill="none" stroke="#41D6A0" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cy="19" r="12" fill="#B6F7D8"/>
+<path d="M-46 92H46" fill="none" stroke="#41D6A0" stroke-opacity=".82" stroke-width="7" stroke-linecap="round"/>
+<circle cx="200.736" cy="121.539" r="17" fill="#B6F7D8" stroke="#41D6A0" stroke-width="7"/>
+<circle cx="-153.834" cy="166.643" r="17" fill="#B6F7D8" stroke="#41D6A0" stroke-width="7"/>
+</g>
+<g font-family="Arial, Helvetica, sans-serif"><text x="237" y="105" fill="#E9F4F0" font-size="75" font-weight="700" letter-spacing="5">AXIOM</text><text x="241" y="154" fill="#41D6A0" font-size="25" letter-spacing="2.4">RESEARCH ENGINE</text></g>
 </svg>

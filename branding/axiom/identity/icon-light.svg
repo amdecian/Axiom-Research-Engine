@@ -1,5 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
-  <title id="title">AXIOM light emblem</title>
-  <desc id="desc">A geometric A constructed from converging vectors and a central evidence node.</desc>
-<g transform="translate(0 0) scale(1)"><rect width="144" height="144" rx="28" fill="#F5FAF8" stroke="#D4E5DC" stroke-width="2"/><path d="M25 116 72 24 119 116 M47 83H97" fill="none" stroke="#09694E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="72" cy="83" r="8" fill="#142C26"/><path d="M36 128H108" stroke="#09694E" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/></g>
+  <title id="title">AXIOM light crossed-orbit emblem</title>
+  <desc id="desc">Two crossed electron-style ellipses at plus and minus 38 degrees surround the geometric AXIOM A and its evidence node. Conceptual artwork, not a physical electron model.</desc>
+<rect x="1" y="1" width="142" height="142" rx="26" fill="#F5FAF8" stroke="#D4E5DC" stroke-width="2"/>
+<g transform="translate(72 70) scale(0.274)">
+
+<g fill="none" stroke="#09694E" stroke-width="12" stroke-opacity="1"><ellipse rx="245" ry="90" transform="rotate(38)"/><ellipse rx="245" ry="90" transform="rotate(-38)"/></g>
+
+<circle r="13" fill="#142C26"/>
+<path d="M-60 70 L0 -65 L60 70 M-34 19 H34" fill="none" stroke="#09694E" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cy="19" r="12" fill="#142C26"/>
+<path d="M-46 92H46" fill="none" stroke="#09694E" stroke-opacity=".82" stroke-width="7" stroke-linecap="round"/>
+<circle cx="200.736" cy="121.539" r="17" fill="#142C26" stroke="#09694E" stroke-width="7"/>
+<circle cx="-153.834" cy="166.643" r="17" fill="#142C26" stroke="#09694E" stroke-width="7"/>
+</g>
 </svg>

@@ -1,6 +1,6 @@
 # AXIOM Research Engine
 
-![AXIOM Research Engine — Evidence before conclusions](branding/axiom/identity/repository-banner.svg)
+![AXIOM Research Engine — crossed electron-style orbital identity](branding/axiom/identity/repository-banner-orbital.svg)
 
 **Evidence before conclusions.**
 
@@ -8,7 +8,7 @@ Mathematical research software for exact SAT counting, structured permanents, we
 
 **Status:** v0.4.0 publication candidate · public bootstrap in progress · Python 3.11+ · no third-party runtime dependencies.
 
-[Research portal source](docs/index.html) · [Scientific program](docs/Scientific_Program.md) · [Engineering contract](docs/Hosted_Engineering_Contract.md) · [Actions](https://github.com/amdecian/Axiom-Research-Engine/actions) · [Branding](branding/README.md)
+[Research portal source](docs/index.html) · [Scientific program](docs/Scientific_Program.md) · [Engineering contract](docs/Hosted_Engineering_Contract.md) · [Actions](https://github.com/amdecian/Axiom-Research-Engine/actions) · [Branding](branding/README.md) · [Startup animation](branding/axiom/identity/splash-preview.html)
 
 > Research boundary: the engine is an experimental computational workspace. Finite verification does not establish a general SAT improvement, P=NP, or a formally verified autonomous research system. Public visibility is not a license grant.
 
